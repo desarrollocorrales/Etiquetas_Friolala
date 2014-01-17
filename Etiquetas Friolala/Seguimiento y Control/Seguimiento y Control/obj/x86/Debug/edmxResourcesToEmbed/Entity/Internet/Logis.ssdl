@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Logisn_Model.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Logisn_ModelStoreContainer">
+    <EntitySet Name="aceptados" EntityType="Logisn_Model.Store.aceptados" store:Type="Tables" Schema="corrales_logisn" />
+    <EntitySet Name="aceptados_detalle" EntityType="Logisn_Model.Store.aceptados_detalle" store:Type="Tables" store:Schema="corrales_logisn" store:Name="aceptados_detalle">
+      <DefiningQuery>SELECT
+      `aceptados_detalle`.`id_pedido`, 
+      `aceptados_detalle`.`id_articulo`, 
+      `aceptados_detalle`.`cantidad`, 
+      `aceptados_detalle`.`fecha_hora_aceptado`, 
+      `aceptados_detalle`.`motivo`, 
+      `aceptados_detalle`.`id_area`
+      FROM `aceptados_detalle` AS `aceptados_detalle`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="areas" EntityType="Logisn_Model.Store.areas" store:Type="Tables" Schema="corrales_logisn" />
+    <EntitySet Name="art_uni" EntityType="Logisn_Model.Store.art_uni" store:Type="Tables" store:Schema="corrales_logisn" store:Name="art_uni">
+      <DefiningQuery>SELECT
+      `art_uni`.`id_articulo`, 
+      `art_uni`.`id_unidad`
+      FROM `art_uni` AS `art_uni`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="articulos" EntityType="Logisn_Model.Store.articulos" store:Type="Tables" Schema="corrales_logisn" />
+    <EntitySet Name="camaras" EntityType="Logisn_Model.Store.camaras" store:Type="Tables" Schema="corrales_logisn" />
+    <EntitySet Name="clientes" EntityType="Logisn_Model.Store.clientes" store:Type="Tables" Schema="corrales_logisn" />
+    <EntitySet Name="lineas" EntityType="Logisn_Model.Store.lineas" store:Type="Tables" Schema="corrales_logisn" />
+    <EntitySet Name="pedidos" EntityType="Logisn_Model.Store.pedidos" store:Type="Tables" Schema="corrales_logisn" />
+    <EntitySet Name="pedidos_detalle" EntityType="Logisn_Model.Store.pedidos_detalle" store:Type="Tables" store:Schema="corrales_logisn" store:Name="pedidos_detalle">
+      <DefiningQuery>SELECT
+      `pedidos_detalle`.`id_pedido`, 
+      `pedidos_detalle`.`id_articulo`, 
+      `pedidos_detalle`.`cantidad`, 
+      `pedidos_detalle`.`unidad`, 
+      `pedidos_detalle`.`resto`
+      FROM `pedidos_detalle` AS `pedidos_detalle`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="rechazados_detalle" EntityType="Logisn_Model.Store.rechazados_detalle" store:Type="Tables" store:Schema="corrales_logisn" store:Name="rechazados_detalle">
+      <DefiningQuery>SELECT
+      `rechazados_detalle`.`id_pedido`, 
+      `rechazados_detalle`.`id_articulo`, 
+      `rechazados_detalle`.`motivo`, 
+      `rechazados_detalle`.`fecha_hora_rechazo`, 
+      `rechazados_detalle`.`id_area`
+      FROM `rechazados_detalle` AS `rechazados_detalle`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="reportes" EntityType="Logisn_Model.Store.reportes" store:Type="Tables" Schema="corrales_logisn" />
+    <EntitySet Name="reportes_detalle" EntityType="Logisn_Model.Store.reportes_detalle" store:Type="Tables" store:Schema="corrales_logisn" store:Name="reportes_detalle">
+      <DefiningQuery>SELECT
+      `reportes_detalle`.`id_rep`, 
+      `reportes_detalle`.`id_art`, 
+      `reportes_detalle`.`cantidad`, 
+      `reportes_detalle`.`precio`, 
+      `reportes_detalle`.`unidad`, 
+      `reportes_detalle`.`id_area`
+      FROM `reportes_detalle` AS `reportes_detalle`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="reportes_detalles" EntityType="Logisn_Model.Store.reportes_detalles" store:Type="Tables" store:Schema="corrales_logisn" store:Name="reportes_detalles">
+      <DefiningQuery>SELECT
+      `reportes_detalles`.`id_rep`, 
+      `reportes_detalles`.`id_art`, 
+      `reportes_detalles`.`cantidad`, 
+      `reportes_detalles`.`precio`, 
+      `reportes_detalles`.`unidad`, 
+      `reportes_detalles`.`id_area`, 
+      `reportes_detalles`.`id_pedido`
+      FROM `reportes_detalles` AS `reportes_detalles`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="rutas" EntityType="Logisn_Model.Store.rutas" store:Type="Tables" store:Schema="corrales_logisn" store:Name="rutas">
+      <DefiningQuery>SELECT
+      `rutas`.`id_ruta`, 
+      `rutas`.`ruta`, 
+      `rutas`.`dia`
+      FROM `rutas` AS `rutas`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="unidades" EntityType="Logisn_Model.Store.unidades" store:Type="Tables" Schema="corrales_logisn" />
+    <EntitySet Name="ventas" EntityType="Logisn_Model.Store.ventas" store:Type="Tables" Schema="corrales_logisn" />
+    <AssociationSet Name="art_uni_fk" Association="Logisn_Model.Store.art_uni_fk">
+      <End Role="articulos" EntitySet="articulos" />
+      <End Role="art_uni" EntitySet="art_uni" />
+    </AssociationSet>
+    <AssociationSet Name="art_uni_fk1" Association="Logisn_Model.Store.art_uni_fk1">
+      <End Role="unidades" EntitySet="unidades" />
+      <End Role="art_uni" EntitySet="art_uni" />
+    </AssociationSet>
+    <AssociationSet Name="pedidos_detalle_ibfk_1" Association="Logisn_Model.Store.pedidos_detalle_ibfk_1">
+      <End Role="articulos" EntitySet="articulos" />
+      <End Role="pedidos_detalle" EntitySet="pedidos_detalle" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="aceptados">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_pedido" Type="int" Nullable="false" />
+    <Property Name="fecha_hora_aceptado" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'corrales_logisn.aceptados_detalle' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="aceptados_detalle">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+      <PropertyRef Name="id_articulo" />
+      <PropertyRef Name="cantidad" />
+      <PropertyRef Name="fecha_hora_aceptado" />
+      <PropertyRef Name="motivo" />
+      <PropertyRef Name="id_area" />
+    </Key>
+    <Property Name="id_pedido" Type="int" Nullable="false" />
+    <Property Name="id_articulo" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="double" Nullable="false" />
+    <Property Name="fecha_hora_aceptado" Type="datetime" Nullable="false" />
+    <Property Name="motivo" Type="char" Nullable="false" MaxLength="30" />
+    <Property Name="id_area" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="areas">
+    <Key>
+      <PropertyRef Name="id_area" />
+    </Key>
+    <Property Name="id_area" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="area" Type="char" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'corrales_logisn.art_uni' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="art_uni">
+    <Key>
+      <PropertyRef Name="id_articulo" />
+    </Key>
+    <Property Name="id_articulo" Type="int" Nullable="false" />
+    <Property Name="id_unidad" Type="int" />
+  </EntityType>
+  <EntityType Name="articulos">
+    <Key>
+      <PropertyRef Name="id_articulo" />
+    </Key>
+    <Property Name="id_articulo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="clave" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="id_linea" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="id_area" Type="int" Nullable="false" />
+    <Property Name="id_camara" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="camaras">
+    <Key>
+      <PropertyRef Name="id_camara" />
+    </Key>
+    <Property Name="id_camara" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="camara" Type="char" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="char" Nullable="false" MaxLength="100" />
+    <Property Name="id_vendedor" Type="int" Nullable="false" />
+    <Property Name="id_interno" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="id_ruta" Type="int" Nullable="false" />
+    <Property Name="estatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lineas">
+    <Key>
+      <PropertyRef Name="id_linea" />
+    </Key>
+    <Property Name="id_linea" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="char" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="pedidos">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_pedido" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="fecha_hora_creacion" Type="datetime" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="observaciones" Type="text" Nullable="false" />
+    <Property Name="fecha_surtir" Type="date" Nullable="false" />
+    <Property Name="requerido" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'corrales_logisn.pedidos_detalle' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="pedidos_detalle">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+      <PropertyRef Name="id_articulo" />
+      <PropertyRef Name="cantidad" />
+      <PropertyRef Name="unidad" />
+      <PropertyRef Name="resto" />
+    </Key>
+    <Property Name="id_pedido" Type="int" Nullable="false" />
+    <Property Name="id_articulo" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="double" Nullable="false" />
+    <Property Name="unidad" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="resto" Type="double" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'corrales_logisn.rechazados_detalle' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="rechazados_detalle">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+      <PropertyRef Name="id_articulo" />
+      <PropertyRef Name="motivo" />
+      <PropertyRef Name="fecha_hora_rechazo" />
+      <PropertyRef Name="id_area" />
+    </Key>
+    <Property Name="id_pedido" Type="int" Nullable="false" />
+    <Property Name="id_articulo" Type="int" Nullable="false" />
+    <Property Name="motivo" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="fecha_hora_rechazo" Type="datetime" Nullable="false" />
+    <Property Name="id_area" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reportes">
+    <Key>
+      <PropertyRef Name="id_rep" />
+    </Key>
+    <Property Name="id_rep" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="desde" Type="date" Nullable="false" />
+    <Property Name="hasta" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'corrales_logisn.reportes_detalle' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="reportes_detalle">
+    <Key>
+      <PropertyRef Name="id_rep" />
+      <PropertyRef Name="id_art" />
+      <PropertyRef Name="cantidad" />
+      <PropertyRef Name="precio" />
+      <PropertyRef Name="unidad" />
+      <PropertyRef Name="id_area" />
+    </Key>
+    <Property Name="id_rep" Type="int" Nullable="false" />
+    <Property Name="id_art" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="float" Nullable="false" />
+    <Property Name="precio" Type="float" Nullable="false" />
+    <Property Name="unidad" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="id_area" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'corrales_logisn.reportes_detalles' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="reportes_detalles">
+    <Key>
+      <PropertyRef Name="id_rep" />
+      <PropertyRef Name="id_art" />
+      <PropertyRef Name="cantidad" />
+      <PropertyRef Name="precio" />
+      <PropertyRef Name="unidad" />
+      <PropertyRef Name="id_area" />
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_rep" Type="int" Nullable="false" />
+    <Property Name="id_art" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="float" Nullable="false" />
+    <Property Name="precio" Type="float" Nullable="false" />
+    <Property Name="unidad" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="id_area" Type="int" Nullable="false" />
+    <Property Name="id_pedido" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'corrales_logisn.rutas' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="rutas">
+    <Key>
+      <PropertyRef Name="id_ruta" />
+      <PropertyRef Name="ruta" />
+      <PropertyRef Name="dia" />
+    </Key>
+    <Property Name="id_ruta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ruta" Type="char" Nullable="false" MaxLength="30" />
+    <Property Name="dia" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="unidades">
+    <Key>
+      <PropertyRef Name="id_unidad" />
+    </Key>
+    <Property Name="id_unidad" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="unidad" Type="char" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ventas">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_pedido" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="art_uni_fk">
+    <End Role="articulos" Type="Logisn_Model.Store.articulos" Multiplicity="1" />
+    <End Role="art_uni" Type="Logisn_Model.Store.art_uni" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="articulos">
+        <PropertyRef Name="id_articulo" />
+      </Principal>
+      <Dependent Role="art_uni">
+        <PropertyRef Name="id_articulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="art_uni_fk1">
+    <End Role="unidades" Type="Logisn_Model.Store.unidades" Multiplicity="0..1" />
+    <End Role="art_uni" Type="Logisn_Model.Store.art_uni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="unidades">
+        <PropertyRef Name="id_unidad" />
+      </Principal>
+      <Dependent Role="art_uni">
+        <PropertyRef Name="id_unidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="pedidos_detalle_ibfk_1">
+    <End Role="articulos" Type="Logisn_Model.Store.articulos" Multiplicity="1" />
+    <End Role="pedidos_detalle" Type="Logisn_Model.Store.pedidos_detalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="articulos">
+        <PropertyRef Name="id_articulo" />
+      </Principal>
+      <Dependent Role="pedidos_detalle">
+        <PropertyRef Name="id_articulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

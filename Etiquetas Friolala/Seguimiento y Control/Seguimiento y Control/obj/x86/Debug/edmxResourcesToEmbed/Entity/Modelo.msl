@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Seguimiento_ACC_ModelStoreContainer" CdmEntityContainer="Seguimiento_ACC_Entities">
+    <EntitySetMapping Name="areas">
+      <EntityTypeMapping TypeName="Seguimiento_ACC_Model.areas">
+        <MappingFragment StoreEntitySet="areas">
+          <ScalarProperty Name="id_area" ColumnName="id_area" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articulos">
+      <EntityTypeMapping TypeName="Seguimiento_ACC_Model.articulos">
+        <MappingFragment StoreEntitySet="articulos">
+          <ScalarProperty Name="unidad" ColumnName="unidad" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="articulo" ColumnName="articulo" />
+          <ScalarProperty Name="dias_caducidad" ColumnName="dias_caducidad" />
+          <ScalarProperty Name="id_bodega" ColumnName="id_bodega" />
+          <ScalarProperty Name="peso_variado" ColumnName="peso_variado" />
+          <ScalarProperty Name="parcial" ColumnName="parcial" />
+          <ScalarProperty Name="leyenda" ColumnName="leyenda" />
+          <ScalarProperty Name="cantidad_fija" ColumnName="cantidad_fija" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bodegas">
+      <EntityTypeMapping TypeName="Seguimiento_ACC_Model.bodegas">
+        <MappingFragment StoreEntitySet="bodegas">
+          <ScalarProperty Name="id_bodega" ColumnName="id_bodega" />
+          <ScalarProperty Name="bodega" ColumnName="bodega" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="etiquetas">
+      <EntityTypeMapping TypeName="Seguimiento_ACC_Model.etiquetas">
+        <MappingFragment StoreEntitySet="etiquetas">
+          <ScalarProperty Name="id_etiqueta" ColumnName="id_etiqueta" />
+          <ScalarProperty Name="numero_etiqueta" ColumnName="numero_etiqueta" />
+          <ScalarProperty Name="tipo_etiqueta" ColumnName="tipo_etiqueta" />
+          <ScalarProperty Name="id_lote" ColumnName="id_lote" />
+          <ScalarProperty Name="clave_articulo" ColumnName="clave_articulo" />
+          <ScalarProperty Name="fecha_empaque" ColumnName="fecha_empaque" />
+          <ScalarProperty Name="fecha_caducidad" ColumnName="fecha_caducidad" />
+          <ScalarProperty Name="id_bodega" ColumnName="id_bodega" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="unidad" ColumnName="unidad" />
+          <ScalarProperty Name="piezas" ColumnName="piezas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lotes">
+      <EntityTypeMapping TypeName="Seguimiento_ACC_Model.lotes">
+        <MappingFragment StoreEntitySet="lotes">
+          <ScalarProperty Name="id_lote" ColumnName="id_lote" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pesos_fijos">
+      <EntityTypeMapping TypeName="Seguimiento_ACC_Model.pesos_fijos">
+        <MappingFragment StoreEntitySet="pesos_fijos">
+          <ScalarProperty Name="clave_articulo" ColumnName="clave_articulo" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proveedores">
+      <EntityTypeMapping TypeName="Seguimiento_ACC_Model.proveedores">
+        <MappingFragment StoreEntitySet="proveedores">
+          <ScalarProperty Name="id_proveedor" ColumnName="id_proveedor" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="Seguimiento_ACC_Model.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_area" ColumnName="id_area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="unidades_catalog">
+      <EntityTypeMapping TypeName="Seguimiento_ACC_Model.unidades_catalog">
+        <MappingFragment StoreEntitySet="unidades_catalog">
+          <ScalarProperty Name="unidad" ColumnName="unidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

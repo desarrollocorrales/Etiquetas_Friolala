@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="accModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="accModelStoreContainer">
+    <EntitySet Name="articulos" EntityType="accModel.Store.articulos" store:Type="Tables" Schema="acc" />
+  </EntityContainer>
+  <EntityType Name="articulos">
+    <Key>
+      <PropertyRef Name="articulo_id" />
+    </Key>
+    <Property Name="articulo_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="es_almacenable" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="es_juego" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="causa_susp" Type="varchar" MaxLength="100" />
+    <Property Name="fecha_susp" Type="date" />
+    <Property Name="imprimir_comp" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="linea_articulo_id" Type="int" />
+    <Property Name="unidad_venta" Type="varchar" MaxLength="5" />
+    <Property Name="unidad_compra" Type="varchar" MaxLength="5" />
+    <Property Name="contenido_unidad_comp" Type="double" />
+    <Property Name="peso_unitario" Type="double" />
+    <Property Name="es_peso_variable" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="seguimiento" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="dias_garantia" Type="int" />
+    <Property Name="es_importado" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="es_siempre_importado" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="pctje_arancel" Type="double" />
+    <Property Name="notas_compras" Type="blob" />
+    <Property Name="imprimir_notas_compras" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="notas_ventas" Type="blob" />
+    <Property Name="imprimir_notas_ventas" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="es_precio_variable" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="cuenta_almacen" Type="varchar" MaxLength="30" />
+    <Property Name="cuenta_costo_venta" Type="varchar" MaxLength="30" />
+    <Property Name="cuenta_ventas" Type="varchar" MaxLength="30" />
+    <Property Name="cuenta_devol_ventas" Type="varchar" MaxLength="30" />
+    <Property Name="cuenta_compras" Type="varchar" MaxLength="30" />
+    <Property Name="cuenta_devol_compras" Type="varchar" MaxLength="30" />
+    <Property Name="fecha_ultima_compra" Type="date" />
+    <Property Name="costo_ultima_compra" Type="double" Nullable="false" />
+    <Property Name="fpgc_unitario" Type="double" />
+    <Property Name="usuario_creador" Type="varchar" MaxLength="31" />
+    <Property Name="fecha_hora_creacion" Type="datetime" />
+    <Property Name="usuario_aut_creacion" Type="varchar" MaxLength="31" />
+    <Property Name="usuario_ult_modif" Type="varchar" MaxLength="31" />
+    <Property Name="fecha_hora_ult_modif" Type="datetime" />
+    <Property Name="usuario_aut_modif" Type="varchar" MaxLength="31" />
+    <Property Name="sucursal" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+</Schema>

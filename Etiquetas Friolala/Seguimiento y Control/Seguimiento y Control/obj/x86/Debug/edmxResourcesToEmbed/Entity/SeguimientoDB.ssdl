@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Seguimiento_ACC_Model.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Seguimiento_ACC_ModelStoreContainer">
+    <EntitySet Name="areas" EntityType="Seguimiento_ACC_Model.Store.areas" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="articulos" EntityType="Seguimiento_ACC_Model.Store.articulos" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="articulos_unidades" EntityType="Seguimiento_ACC_Model.Store.articulos_unidades" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="bodegas" EntityType="Seguimiento_ACC_Model.Store.bodegas" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="proveedores" EntityType="Seguimiento_ACC_Model.Store.proveedores" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="unidades" EntityType="Seguimiento_ACC_Model.Store.unidades" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="usuarios" EntityType="Seguimiento_ACC_Model.Store.usuarios" store:Type="Tables" Schema="seguimiento_acc" />
+  </EntityContainer>
+  <EntityType Name="areas">
+    <Key>
+      <PropertyRef Name="id_area" />
+    </Key>
+    <Property Name="id_area" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="75" />
+  </EntityType>
+  <EntityType Name="articulos">
+    <Key>
+      <PropertyRef Name="id_articulo" />
+    </Key>
+    <Property Name="id_articulo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="clave" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="articulo" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="dias_caducidad" Type="int" Nullable="false" />
+    <Property Name="id_bodega" Type="int" Nullable="false" />
+    <Property Name="peso_variado" Type="bit" Nullable="false" />
+    <Property Name="parcial" Type="bit" Nullable="false" />
+    <Property Name="leyenda" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="articulos_unidades">
+    <Key>
+      <PropertyRef Name="id_articulo" />
+      <PropertyRef Name="id_unidad" />
+    </Key>
+    <Property Name="id_articulo" Type="int" Nullable="false" />
+    <Property Name="id_unidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bodegas">
+    <Key>
+      <PropertyRef Name="id_bodega" />
+    </Key>
+    <Property Name="id_bodega" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bodega" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="proveedores">
+    <Key>
+      <PropertyRef Name="id_proveedor" />
+    </Key>
+    <Property Name="id_proveedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="estatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="unidades">
+    <Key>
+      <PropertyRef Name="id_unidad" />
+    </Key>
+    <Property Name="id_unidad" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="unidad" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="id_area" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>

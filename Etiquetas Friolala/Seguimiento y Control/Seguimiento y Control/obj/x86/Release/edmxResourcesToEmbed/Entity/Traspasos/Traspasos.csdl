@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Traspasos_Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Traspasos_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="empresas" EntityType="Traspasos_Model.empresas" />
+    <EntitySet Name="etiquetas" EntityType="Traspasos_Model.etiquetas" />
+    <EntitySet Name="paquetes" EntityType="Traspasos_Model.paquetes" />
+  </EntityContainer>
+  <EntityType Name="empresas">
+    <Key>
+      <PropertyRef Name="id_empresa" />
+    </Key>
+    <Property Name="id_empresa" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="etiquetas">
+    <Key>
+      <PropertyRef Name="id_etiqueta" />
+    </Key>
+    <Property Name="id_etiqueta" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="numero_etiqueta" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="tipo_etiqueta" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="id_lote_origen" Type="Int64" Nullable="false" />
+    <Property Name="clave_articulo" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="fecha_empaque" Type="DateTime" Nullable="false" />
+    <Property Name="fecha_caducidad" Type="DateTime" Nullable="false" />
+    <Property Name="cantidad" Type="Decimal" Nullable="false" />
+    <Property Name="unidad" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="piezas" Type="Int64" />
+    <Property Name="id_empresa_destino" Type="Int64" Nullable="false" />
+    <Property Name="id_empresa_origen" Type="Int64" Nullable="false" />
+    <Property Name="estado" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="numero_etiqueta_contenedor" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="paquetes">
+    <Key>
+      <PropertyRef Name="id_paquetes" />
+    </Key>
+    <Property Type="Int64" Name="id_paquetes" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="numero_etiqueta" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="cantidad" Nullable="false" />
+    <Property Type="String" Name="unidad" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="id_pedido_origen" Nullable="false" />
+    <Property Type="DateTime" Name="fecha_creacion" Nullable="false" />
+    <Property Type="DateTime" Name="fecha_caducidad" Nullable="false" />
+    <Property Type="Int64" Name="id_empresa_origen" Nullable="false" />
+    <Property Type="Int64" Name="id_empresa_destino" Nullable="false" />
+  </EntityType>
+</Schema>

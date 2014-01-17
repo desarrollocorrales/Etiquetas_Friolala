@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="accModelStoreContainer" CdmEntityContainer="accEntities">
+    <EntitySetMapping Name="articulos">
+      <EntityTypeMapping TypeName="accModel.articulos">
+        <MappingFragment StoreEntitySet="articulos">
+          <ScalarProperty Name="articulo_id" ColumnName="articulo_id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="es_almacenable" ColumnName="es_almacenable" />
+          <ScalarProperty Name="es_juego" ColumnName="es_juego" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="causa_susp" ColumnName="causa_susp" />
+          <ScalarProperty Name="fecha_susp" ColumnName="fecha_susp" />
+          <ScalarProperty Name="imprimir_comp" ColumnName="imprimir_comp" />
+          <ScalarProperty Name="linea_articulo_id" ColumnName="linea_articulo_id" />
+          <ScalarProperty Name="unidad_venta" ColumnName="unidad_venta" />
+          <ScalarProperty Name="unidad_compra" ColumnName="unidad_compra" />
+          <ScalarProperty Name="contenido_unidad_comp" ColumnName="contenido_unidad_comp" />
+          <ScalarProperty Name="peso_unitario" ColumnName="peso_unitario" />
+          <ScalarProperty Name="es_peso_variable" ColumnName="es_peso_variable" />
+          <ScalarProperty Name="seguimiento" ColumnName="seguimiento" />
+          <ScalarProperty Name="dias_garantia" ColumnName="dias_garantia" />
+          <ScalarProperty Name="es_importado" ColumnName="es_importado" />
+          <ScalarProperty Name="es_siempre_importado" ColumnName="es_siempre_importado" />
+          <ScalarProperty Name="pctje_arancel" ColumnName="pctje_arancel" />
+          <ScalarProperty Name="notas_compras" ColumnName="notas_compras" />
+          <ScalarProperty Name="imprimir_notas_compras" ColumnName="imprimir_notas_compras" />
+          <ScalarProperty Name="notas_ventas" ColumnName="notas_ventas" />
+          <ScalarProperty Name="imprimir_notas_ventas" ColumnName="imprimir_notas_ventas" />
+          <ScalarProperty Name="es_precio_variable" ColumnName="es_precio_variable" />
+          <ScalarProperty Name="cuenta_almacen" ColumnName="cuenta_almacen" />
+          <ScalarProperty Name="cuenta_costo_venta" ColumnName="cuenta_costo_venta" />
+          <ScalarProperty Name="cuenta_ventas" ColumnName="cuenta_ventas" />
+          <ScalarProperty Name="cuenta_devol_ventas" ColumnName="cuenta_devol_ventas" />
+          <ScalarProperty Name="cuenta_compras" ColumnName="cuenta_compras" />
+          <ScalarProperty Name="cuenta_devol_compras" ColumnName="cuenta_devol_compras" />
+          <ScalarProperty Name="fecha_ultima_compra" ColumnName="fecha_ultima_compra" />
+          <ScalarProperty Name="costo_ultima_compra" ColumnName="costo_ultima_compra" />
+          <ScalarProperty Name="fpgc_unitario" ColumnName="fpgc_unitario" />
+          <ScalarProperty Name="usuario_creador" ColumnName="usuario_creador" />
+          <ScalarProperty Name="fecha_hora_creacion" ColumnName="fecha_hora_creacion" />
+          <ScalarProperty Name="usuario_aut_creacion" ColumnName="usuario_aut_creacion" />
+          <ScalarProperty Name="usuario_ult_modif" ColumnName="usuario_ult_modif" />
+          <ScalarProperty Name="fecha_hora_ult_modif" ColumnName="fecha_hora_ult_modif" />
+          <ScalarProperty Name="usuario_aut_modif" ColumnName="usuario_aut_modif" />
+          <ScalarProperty Name="sucursal" ColumnName="sucursal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

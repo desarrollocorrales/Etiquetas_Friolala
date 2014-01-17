@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="seguimiento_traspasosModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="seguimiento_traspasosModelStoreContainer">
+    <EntitySet Name="empresas" EntityType="seguimiento_traspasosModel.Store.empresas" store:Type="Tables" Schema="seguimiento_traspasos" />
+    <EntitySet Name="etiquetas" EntityType="seguimiento_traspasosModel.Store.etiquetas" store:Type="Tables" Schema="seguimiento_traspasos" />
+  </EntityContainer>
+  <EntityType Name="empresas">
+    <Key>
+      <PropertyRef Name="id_empresa" />
+    </Key>
+    <Property Name="id_empresa" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="etiquetas">
+    <Key>
+      <PropertyRef Name="id_etiqueta" />
+    </Key>
+    <Property Name="id_etiqueta" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="numero_etiqueta" Type="varchar" Nullable="false" MaxLength="14" />
+    <Property Name="tipo_etiqueta" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="id_lote_origen" Type="uint" Nullable="false" />
+    <Property Name="clave_articulo" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="fecha_empaque" Type="datetime" Nullable="false" />
+    <Property Name="fecha_caducidad" Type="datetime" Nullable="false" />
+    <Property Name="cantidad" Type="decimal" Nullable="false" Scale="3" />
+    <Property Name="unidad" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="piezas" Type="uint" />
+    <Property Name="id_empresa_destino" Type="uint" Nullable="false" />
+    <Property Name="id_empresa_origen" Type="uint" Nullable="false" />
+    <Property Name="estado" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="numero_etiqueta_contenedor" Type="varchar" MaxLength="14" />
+  </EntityType>
+</Schema>

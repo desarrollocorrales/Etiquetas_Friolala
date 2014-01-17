@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Seguimiento_ACC_Model.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Seguimiento_ACC_ModelStoreContainer">
+    <EntitySet Name="areas" EntityType="Seguimiento_ACC_Model.Store.areas" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="articulos" EntityType="Seguimiento_ACC_Model.Store.articulos" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="bodegas" EntityType="Seguimiento_ACC_Model.Store.bodegas" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="etiquetas" EntityType="Seguimiento_ACC_Model.Store.etiquetas" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="lotes" EntityType="Seguimiento_ACC_Model.Store.lotes" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="pesos_fijos" EntityType="Seguimiento_ACC_Model.Store.pesos_fijos" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="proveedores" EntityType="Seguimiento_ACC_Model.Store.proveedores" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="unidades_catalog" EntityType="Seguimiento_ACC_Model.Store.unidades_catalog" store:Type="Tables" Schema="seguimiento_acc" />
+    <EntitySet Name="usuarios" EntityType="Seguimiento_ACC_Model.Store.usuarios" store:Type="Tables" Schema="seguimiento_acc" />
+  </EntityContainer>
+  <EntityType Name="areas">
+    <Key>
+      <PropertyRef Name="id_area" />
+    </Key>
+    <Property Name="id_area" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="75" />
+  </EntityType>
+  <EntityType Name="articulos">
+    <Key>
+      <PropertyRef Name="clave" />
+    </Key>
+    <Property Name="clave" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="articulo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="dias_caducidad" Type="int" Nullable="false" />
+    <Property Name="id_bodega" Type="int" Nullable="false" />
+    <Property Name="peso_variado" Type="bit" Nullable="false" />
+    <Property Name="parcial" Type="bit" Nullable="false" />
+    <Property Name="leyenda" Type="bit" Nullable="false" />
+    <Property Name="cantidad_fija" Type="int" />
+    <Property Name="unidad" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="bodegas">
+    <Key>
+      <PropertyRef Name="id_bodega" />
+    </Key>
+    <Property Name="id_bodega" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bodega" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="etiquetas">
+    <Key>
+      <PropertyRef Name="id_etiqueta" />
+    </Key>
+    <Property Name="id_etiqueta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="numero_etiqueta" Type="varchar" MaxLength="14" />
+    <Property Name="tipo_etiqueta" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="id_lote" Type="int" Nullable="false" />
+    <Property Name="clave_articulo" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="fecha_empaque" Type="datetime" Nullable="false" />
+    <Property Name="fecha_caducidad" Type="datetime" Nullable="false" />
+    <Property Name="id_bodega" Type="int" Nullable="false" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="float" Nullable="false" />
+    <Property Name="unidad" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="piezas" Type="int" />
+  </EntityType>
+  <EntityType Name="lotes">
+    <Key>
+      <PropertyRef Name="id_lote" />
+    </Key>
+    <Property Name="id_lote" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="fecha_creacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pesos_fijos">
+    <Key>
+      <PropertyRef Name="clave_articulo" />
+      <PropertyRef Name="cantidad" />
+    </Key>
+    <Property Name="clave_articulo" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="cantidad" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="proveedores">
+    <Key>
+      <PropertyRef Name="id_proveedor" />
+    </Key>
+    <Property Name="id_proveedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="estatus" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="unidades_catalog">
+    <Key>
+      <PropertyRef Name="unidad" />
+    </Key>
+    <Property Name="unidad" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="id_area" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>
