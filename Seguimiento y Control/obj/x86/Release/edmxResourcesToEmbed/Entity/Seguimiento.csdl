@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Seguimiento_Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Seguimiento_ACC_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="areas" EntityType="Seguimiento_Model.areas" />
+    <EntitySet Name="articulos" EntityType="Seguimiento_Model.articulos" />
+    <EntitySet Name="bodegas" EntityType="Seguimiento_Model.bodegas" />
+    <EntitySet Name="catalog_comandos_etiquetas" EntityType="Seguimiento_Model.catalog_comandos_etiquetas" />
+    <EntitySet Name="catalog_estatus_pedido" EntityType="Seguimiento_Model.catalog_estatus_pedido" />
+    <EntitySet Name="catalog_tipo_contenedores" EntityType="Seguimiento_Model.catalog_tipo_contenedores" />
+    <EntitySet Name="catalog_tipo_pedido" EntityType="Seguimiento_Model.catalog_tipo_pedido" />
+    <EntitySet Name="catalog_tipo_salida" EntityType="Seguimiento_Model.catalog_tipo_salida" />
+    <EntitySet Name="catalog_unidades" EntityType="Seguimiento_Model.catalog_unidades" />
+    <EntitySet Name="configuracion" EntityType="Seguimiento_Model.configuracion" />
+    <EntitySet Name="contenedores" EntityType="Seguimiento_Model.contenedores" />
+    <EntitySet Name="etiquetas" EntityType="Seguimiento_Model.etiquetas" />
+    <EntitySet Name="lotes" EntityType="Seguimiento_Model.lotes" />
+    <EntitySet Name="paquetes" EntityType="Seguimiento_Model.paquetes" />
+    <EntitySet Name="paquetes_det" EntityType="Seguimiento_Model.paquetes_det" />
+    <EntitySet Name="pedidos_internos" EntityType="Seguimiento_Model.pedidos_internos" />
+    <EntitySet Name="pedidos_internos_det" EntityType="Seguimiento_Model.pedidos_internos_det" />
+    <EntitySet Name="pedidos_sucursales" EntityType="Seguimiento_Model.pedidos_sucursales" />
+    <EntitySet Name="pedidos_sucursales_det" EntityType="Seguimiento_Model.pedidos_sucursales_det" />
+    <EntitySet Name="pedidos_vendedores" EntityType="Seguimiento_Model.pedidos_vendedores" />
+    <EntitySet Name="pedidos_vendedores_det" EntityType="Seguimiento_Model.pedidos_vendedores_det" />
+    <EntitySet Name="pesos_fijos" EntityType="Seguimiento_Model.pesos_fijos" />
+    <EntitySet Name="proveedores" EntityType="Seguimiento_Model.proveedores" />
+    <EntitySet Name="salidas" EntityType="Seguimiento_Model.salidas" />
+    <EntitySet Name="salidas_det" EntityType="Seguimiento_Model.salidas_det" />
+    <EntitySet Name="etiquetas_traspasadas" EntityType="Seguimiento_Model.etiquetas_traspasadas" />
+    <EntitySet Name="salidas_sucursales" EntityType="Seguimiento_Model.salidas_sucursales" />
+    <EntitySet Name="salidas_sucursales_det" EntityType="Seguimiento_Model.salidas_sucursales_det" />
+    <EntitySet Name="salidas_vendedores" EntityType="Seguimiento_Model.salidas_vendedores" />
+    <EntitySet Name="salidas_vendedores_det" EntityType="Seguimiento_Model.salidas_vendedores_det" />
+    <EntitySet Name="usuarios" EntityType="Seguimiento_Model.usuarios" />
+    <EntitySet Name="permisos" EntityType="Seguimiento_Model.permisos" />
+    <AssociationSet Name="fx_id_area" Association="Seguimiento_Model.fx_id_area">
+      <End Role="areas" EntitySet="areas" />
+      <End Role="usuarios" EntitySet="usuarios" />
+    </AssociationSet>
+    <EntitySet Name="catalog_estatus_etiquetas" EntityType="Seguimiento_Model.catalog_estatus_etiquetas" />
+    <AssociationSet Name="fk_articulos" Association="Seguimiento_Model.fk_articulos">
+      <End Role="articulos" EntitySet="articulos" />
+      <End Role="etiquetas_traspasadas" EntitySet="etiquetas_traspasadas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_clave_articulo" Association="Seguimiento_Model.fk_clave_articulo">
+      <End Role="articulos" EntitySet="articulos" />
+      <End Role="etiquetas" EntitySet="etiquetas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_estados" Association="Seguimiento_Model.fk_estados">
+      <End Role="catalog_estatus_etiquetas" EntitySet="catalog_estatus_etiquetas" />
+      <End Role="etiquetas_traspasadas" EntitySet="etiquetas_traspasadas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_estatus" Association="Seguimiento_Model.fk_estatus">
+      <End Role="catalog_estatus_etiquetas" EntitySet="catalog_estatus_etiquetas" />
+      <End Role="etiquetas" EntitySet="etiquetas" />
+    </AssociationSet>
+    <EntitySet Name="paquetes_traspasados" EntityType="Seguimiento_Model.paquetes_traspasados" />
+    <AssociationSet Name="fk_etiquetas" Association="Seguimiento_Model.fk_etiquetas">
+      <End Role="etiquetas" EntitySet="etiquetas" />
+      <End Role="paquetes_det" EntitySet="paquetes_det" />
+    </AssociationSet>
+    <AssociationSet Name="fk_paquetes" Association="Seguimiento_Model.fk_paquetes">
+      <End Role="paquetes" EntitySet="paquetes" />
+      <End Role="paquetes_det" EntitySet="paquetes_det" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="areas">
+    <Key>
+      <PropertyRef Name="id_area" />
+    </Key>
+    <Property Name="id_area" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="usuarios" Relationship="Seguimiento_Model.fx_id_area" FromRole="areas" ToRole="usuarios" />
+  </EntityType>
+  <EntityType Name="articulos">
+    <Key>
+      <PropertyRef Name="clave" />
+    </Key>
+    <Property Name="clave" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="articulo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="dias_caducidad" Type="Int32" Nullable="false" />
+    <Property Name="id_bodega" Type="Int32" Nullable="false" />
+    <Property Name="peso_variado" Type="Boolean" Nullable="false" />
+    <Property Name="parcial" Type="Boolean" Nullable="false" />
+    <Property Name="leyenda" Type="Boolean" Nullable="false" />
+    <Property Name="cantidad_fija" Type="Int32" />
+    <Property Name="unidad" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="piezas" Type="Int32" />
+    <NavigationProperty Name="etiquetas_traspasadas" Relationship="Seguimiento_Model.fk_articulos" FromRole="articulos" ToRole="etiquetas_traspasadas" />
+    <NavigationProperty Name="etiquetas" Relationship="Seguimiento_Model.fk_clave_articulo" FromRole="articulos" ToRole="etiquetas" />
+  </EntityType>
+  <EntityType Name="bodegas">
+    <Key>
+      <PropertyRef Name="id_bodega" />
+    </Key>
+    <Property Name="id_bodega" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bodega" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="catalog_comandos_etiquetas">
+    <Key>
+      <PropertyRef Name="id_comando" />
+    </Key>
+    <Property Name="id_comando" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="etiqueta" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="comando" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="imagen_etiqueta" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="catalog_estatus_pedido">
+    <Key>
+      <PropertyRef Name="id_status" />
+    </Key>
+    <Property Name="id_status" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="catalog_tipo_contenedores">
+    <Key>
+      <PropertyRef Name="id_tipo_contenedor" />
+    </Key>
+    <Property Name="id_tipo_contenedor" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="catalog_tipo_pedido">
+    <Key>
+      <PropertyRef Name="id_tipo_pedido" />
+    </Key>
+    <Property Name="id_tipo_pedido" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="catalog_tipo_salida">
+    <Key>
+      <PropertyRef Name="id_tipo_salida" />
+    </Key>
+    <Property Name="id_tipo_salida" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="catalog_unidades">
+    <Key>
+      <PropertyRef Name="unidad" />
+    </Key>
+    <Property Name="unidad" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="configuracion">
+    <Key>
+      <PropertyRef Name="id_configuracion" />
+    </Key>
+    <Property Name="id_configuracion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="config" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+    <Property Name="valor" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="descripcion" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="contenedores">
+    <Key>
+      <PropertyRef Name="id_contenedor" />
+    </Key>
+    <Property Name="id_contenedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clave_articulo" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="cantidad" Type="Int32" Nullable="false" />
+    <Property Name="tipo" Type="Int32" Nullable="false" />
+    <Property Name="impresion_paquete" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="etiquetas">
+    <Key>
+      <PropertyRef Name="id_etiqueta" />
+    </Key>
+    <Property Name="id_etiqueta" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="numero_etiqueta" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="tipo_etiqueta" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="id_lote" Type="Int64" />
+    <Property Name="id_pedido" Type="Int64" />
+    <Property Name="clave_articulo" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="fecha_empaque" Type="DateTime" Nullable="false" />
+    <Property Name="fecha_caducidad" Type="DateTime" Nullable="false" />
+    <Property Name="id_bodega" Type="Int64" Nullable="false" />
+    <Property Name="id_usuario" Type="Int64" Nullable="false" />
+    <Property Name="cantidad" Type="Decimal" Nullable="false" />
+    <Property Name="unidad" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="piezas" Type="Int64" />
+    <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="tipo_salida" MaxLength="2" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="articulos" Relationship="Seguimiento_Model.fk_clave_articulo" FromRole="etiquetas" ToRole="articulos" />
+    <NavigationProperty Name="catalog_estatus_etiquetas" Relationship="Seguimiento_Model.fk_estatus" FromRole="etiquetas" ToRole="catalog_estatus_etiquetas" />
+    <NavigationProperty Name="paquetes_det" Relationship="Seguimiento_Model.fk_etiquetas" FromRole="etiquetas" ToRole="paquetes_det" />
+    <Property Type="DateTime" Name="fecha_recepcion" />
+  </EntityType>
+  <EntityType Name="lotes">
+    <Key>
+      <PropertyRef Name="id_lote" />
+    </Key>
+    <Property Name="id_lote" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_usuario" Type="Int32" Nullable="false" />
+    <Property Name="fecha_creacion" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="paquetes">
+    <Key>
+      <PropertyRef Name="id_paquete" />
+    </Key>
+    <Property Name="id_paquete" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="numero_etiqueta" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="cantidad" Type="Decimal" Nullable="false" />
+    <Property Name="id_pedido" Type="Int32" Nullable="false" />
+    <Property Name="fecha_creacion" Type="DateTime" Nullable="false" />
+    <Property Name="fecha_caducidad" Type="DateTime" Nullable="false" />
+    <Property Type="String" Name="unidad" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="paquetes_det" Relationship="Seguimiento_Model.fk_paquetes" FromRole="paquetes" ToRole="paquetes_det" />
+  </EntityType>
+  <EntityType Name="paquetes_det">
+    <Key>
+      <PropertyRef Name="id_detalle" />
+    </Key>
+    <Property Name="id_detalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_paquete" Type="Int32" Nullable="false" />
+    <Property Name="id_etiqueta" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="etiquetas" Relationship="Seguimiento_Model.fk_etiquetas" FromRole="paquetes_det" ToRole="etiquetas" />
+    <NavigationProperty Name="paquetes" Relationship="Seguimiento_Model.fk_paquetes" FromRole="paquetes_det" ToRole="paquetes" />
+  </EntityType>
+  <EntityType Name="pedidos_internos">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_pedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigo_pedido" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" />
+    <Property Name="id_usuario" Type="Int32" Nullable="false" />
+    <Property Name="tipo_pedido" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="dias_de_expiracion" Type="Int32" />
+  </EntityType>
+  <EntityType Name="pedidos_internos_det">
+    <Key>
+      <PropertyRef Name="id_pedidos_det" />
+    </Key>
+    <Property Name="id_pedido" Type="Int32" Nullable="false" />
+    <Property Name="id_pedidos_det" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clave_articulo" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="id_bodega" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Decimal" Nullable="false" />
+    <Property Name="unidad" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="pedidos_sucursales">
+    <Key>
+      <PropertyRef Name="id_pedido_sucursal" />
+    </Key>
+    <Property Name="id_pedido_sucursal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_pedido_portal" Type="Int32" Nullable="false" />
+    <Property Name="codigo_pedido" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" />
+    <Property Name="id_usuario_portal" Type="Int32" Nullable="false" />
+    <Property Name="fecha_a_surtir" Type="DateTime" Nullable="false" />
+    <Property Name="tipo_pedido" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="observaciones" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="pedidos_sucursales_det">
+    <Key>
+      <PropertyRef Name="id_pedido_sucursal_det" />
+    </Key>
+    <Property Name="id_pedido_sucursal" Type="Int32" Nullable="false" />
+    <Property Name="id_pedido_sucursal_det" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clave_articulo" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="id_bodega" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Decimal" Nullable="false" />
+    <Property Name="unidad" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="pedidos_vendedores">
+    <Key>
+      <PropertyRef Name="id_pedido_vendedor" />
+    </Key>
+    <Property Name="id_pedido_vendedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_pedido_portal" Type="Int32" Nullable="false" />
+    <Property Name="codigo_pedido" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" />
+    <Property Name="id_usuario_portal" Type="Int32" Nullable="false" />
+    <Property Name="id_cliente_portal" Type="Int32" Nullable="false" />
+    <Property Name="fecha_a_surtir" Type="DateTime" Nullable="false" />
+    <Property Name="tipo_pedido" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="observaciones" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="pedidos_vendedores_det">
+    <Key>
+      <PropertyRef Name="id_pedido_vendedor_det" />
+    </Key>
+    <Property Name="id_pedido_vendedor" Type="Int32" Nullable="false" />
+    <Property Name="id_pedido_vendedor_det" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clave_articulo" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="id_bodega" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Decimal" Nullable="false" />
+    <Property Name="unidad" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="pesos_fijos">
+    <Key>
+      <PropertyRef Name="id_peso_fijo" />
+    </Key>
+    <Property Name="id_peso_fijo" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clave_articulo" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="cantidad" Type="Decimal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="proveedores">
+    <Key>
+      <PropertyRef Name="id_proveedor" />
+    </Key>
+    <Property Name="id_proveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="estatus" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="salidas">
+    <Key>
+      <PropertyRef Name="id_salida" />
+    </Key>
+    <Property Name="id_salida" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codigo_salida" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" />
+    <Property Name="id_usuario_solicitante" Type="Int32" Nullable="false" />
+    <Property Name="id_usuario_responsable" Type="Int32" Nullable="false" />
+    <Property Name="id_pedido" Type="Int32" Nullable="false" />
+    <Property Name="tipo_salida" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="destino" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="folio_factura" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="salidas_det">
+    <Key>
+      <PropertyRef Name="id_salida_det" />
+    </Key>
+    <Property Name="id_salida_det" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_salida" Type="Int32" Nullable="false" />
+    <Property Name="numero_etiqueta" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="etiquetas_traspasadas">
+    <Key>
+      <PropertyRef Name="id_etiqueta_traspasada" />
+    </Key>
+    <Property Type="Int64" Name="id_etiqueta_traspasada" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="numero_etiqueta" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="tipo_etiqueta" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="id_lote_origen" Nullable="false" />
+    <Property Type="String" Name="clave_articulo" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="fecha_empaque" Nullable="false" />
+    <Property Type="DateTime" Name="fecha_caducidad" Nullable="false" />
+    <Property Type="Decimal" Name="cantidad" Nullable="false" />
+    <Property Type="String" Name="unidad" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="piezas" />
+    <Property Type="Int64" Name="id_empresa_origen" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="id_bodega" Nullable="false" />
+    <Property Type="String" Name="numero_etiqueta_contenedor" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="tipo_salida" MaxLength="2" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="articulos" Relationship="Seguimiento_Model.fk_articulos" FromRole="etiquetas_traspasadas" ToRole="articulos" />
+    <NavigationProperty Name="catalog_estatus_etiquetas" Relationship="Seguimiento_Model.fk_estados" FromRole="etiquetas_traspasadas" ToRole="catalog_estatus_etiquetas" />
+  </EntityType>
+  <EntityType Name="salidas_sucursales">
+    <Key>
+      <PropertyRef Name="id_salida" />
+    </Key>
+    <Property Type="Int32" Name="id_salida" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="codigo_salida" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" />
+    <Property Type="Int32" Name="id_usuario_solicitante" Nullable="false" />
+    <Property Type="Int32" Name="id_usuario_responsable" Nullable="false" />
+    <Property Type="Int32" Name="id_pedido" Nullable="false" />
+    <Property Type="String" Name="tipo_salida" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="destino" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="folio_factura" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="salidas_sucursales_det">
+    <Key>
+      <PropertyRef Name="id_salida_det" />
+    </Key>
+    <Property Type="Int32" Name="id_salida_det" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="id_salida" Nullable="false" />
+    <Property Type="String" Name="numero_etiqueta" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="salidas_vendedores">
+    <Key>
+      <PropertyRef Name="id_salida" />
+    </Key>
+    <Property Type="Int32" Name="id_salida" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="codigo_salida" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" />
+    <Property Type="Int32" Name="id_usuario_solicitante" Nullable="false" />
+    <Property Type="Int32" Name="id_usuario_responsable" Nullable="false" />
+    <Property Type="Int32" Name="id_pedido" Nullable="false" />
+    <Property Type="String" Name="tipo_salida" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="destino" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="folio_factura" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="salidas_vendedores_det">
+    <Key>
+      <PropertyRef Name="id_salida_det" />
+    </Key>
+    <Property Type="Int32" Name="id_salida_det" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="id_salida" Nullable="false" />
+    <Property Type="String" Name="numero_etiqueta" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Type="Int32" Name="id_usuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="username" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="password" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="id_area" Nullable="false" />
+    <Property Type="Boolean" Name="estado" Nullable="false" />
+    <NavigationProperty Name="areas" Relationship="Seguimiento_Model.fx_id_area" FromRole="usuarios" ToRole="areas" />
+  </EntityType>
+  <EntityType Name="permisos">
+    <Key>
+      <PropertyRef Name="id_permiso" />
+    </Key>
+    <Property Type="Int64" Name="id_permiso" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="id_usuario" Nullable="false" />
+    <Property Type="String" Name="cadena_permisos" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="fx_id_area">
+    <End Type="Seguimiento_Model.areas" Role="areas" Multiplicity="1" />
+    <End Type="Seguimiento_Model.usuarios" Role="usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="areas">
+        <PropertyRef Name="id_area" />
+      </Principal>
+      <Dependent Role="usuarios">
+        <PropertyRef Name="id_area" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="catalog_estatus_etiquetas">
+    <Key>
+      <PropertyRef Name="id_estatus" />
+    </Key>
+    <Property Type="String" Name="id_estatus" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="etiquetas_traspasadas" Relationship="Seguimiento_Model.fk_estados" FromRole="catalog_estatus_etiquetas" ToRole="etiquetas_traspasadas" />
+    <NavigationProperty Name="etiquetas" Relationship="Seguimiento_Model.fk_estatus" FromRole="catalog_estatus_etiquetas" ToRole="etiquetas" />
+  </EntityType>
+  <Association Name="fk_articulos">
+    <End Type="Seguimiento_Model.articulos" Role="articulos" Multiplicity="1" />
+    <End Type="Seguimiento_Model.etiquetas_traspasadas" Role="etiquetas_traspasadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="articulos">
+        <PropertyRef Name="clave" />
+      </Principal>
+      <Dependent Role="etiquetas_traspasadas">
+        <PropertyRef Name="clave_articulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_clave_articulo">
+    <End Type="Seguimiento_Model.articulos" Role="articulos" Multiplicity="1" />
+    <End Type="Seguimiento_Model.etiquetas" Role="etiquetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="articulos">
+        <PropertyRef Name="clave" />
+      </Principal>
+      <Dependent Role="etiquetas">
+        <PropertyRef Name="clave_articulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_estados">
+    <End Type="Seguimiento_Model.catalog_estatus_etiquetas" Role="catalog_estatus_etiquetas" Multiplicity="1" />
+    <End Type="Seguimiento_Model.etiquetas_traspasadas" Role="etiquetas_traspasadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="catalog_estatus_etiquetas">
+        <PropertyRef Name="id_estatus" />
+      </Principal>
+      <Dependent Role="etiquetas_traspasadas">
+        <PropertyRef Name="estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_estatus">
+    <End Type="Seguimiento_Model.catalog_estatus_etiquetas" Role="catalog_estatus_etiquetas" Multiplicity="1" />
+    <End Type="Seguimiento_Model.etiquetas" Role="etiquetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="catalog_estatus_etiquetas">
+        <PropertyRef Name="id_estatus" />
+      </Principal>
+      <Dependent Role="etiquetas">
+        <PropertyRef Name="estatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="paquetes_traspasados">
+    <Key>
+      <PropertyRef Name="id_paquete_traspasado" />
+    </Key>
+    <Property Type="Int32" Name="id_paquete_traspasado" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="numero_etiqueta" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="cantidad" Nullable="false" />
+    <Property Type="String" Name="unidad" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="id_pedido_origen" Nullable="false" />
+    <Property Type="DateTime" Name="fecha_creacion" Nullable="false" />
+    <Property Type="DateTime" Name="fecha_caducidad" Nullable="false" />
+    <Property Type="Int64" Name="id_empresa_origen" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_etiquetas">
+    <End Type="Seguimiento_Model.etiquetas" Role="etiquetas" Multiplicity="1" />
+    <End Type="Seguimiento_Model.paquetes_det" Role="paquetes_det" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="etiquetas">
+        <PropertyRef Name="id_etiqueta" />
+      </Principal>
+      <Dependent Role="paquetes_det">
+        <PropertyRef Name="id_etiqueta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_paquetes">
+    <End Type="Seguimiento_Model.paquetes" Role="paquetes" Multiplicity="1" />
+    <End Type="Seguimiento_Model.paquetes_det" Role="paquetes_det" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="paquetes">
+        <PropertyRef Name="id_paquete" />
+      </Principal>
+      <Dependent Role="paquetes_det">
+        <PropertyRef Name="id_paquete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
