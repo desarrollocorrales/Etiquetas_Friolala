@@ -90,7 +90,6 @@
             // pbLogoSistema
             // 
             this.pbLogoSistema.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbLogoSistema.Image = global::Seguimiento_y_Control.Properties.Resources.logo2;
             this.pbLogoSistema.Location = new System.Drawing.Point(0, 0);
             this.pbLogoSistema.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogoSistema.Name = "pbLogoSistema";
@@ -118,6 +117,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Login_Load);
+            this.Shown += new System.EventHandler(this.Login_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoSistema)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

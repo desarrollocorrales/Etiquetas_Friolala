@@ -51,9 +51,9 @@
             // 
             // gridPedidos
             // 
-            this.gridPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridPedidos.DataSource = this.gridPedidoSucursalBindingSource;
             this.gridPedidos.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridPedidos.Location = new System.Drawing.Point(13, 81);
@@ -306,7 +306,7 @@
             // 
             this.pbLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbLoading.Image = global::Seguimiento_y_Control.Properties.Resources.cargando;
-            this.pbLoading.Location = new System.Drawing.Point(275, 193);
+            this.pbLoading.Location = new System.Drawing.Point(280, 174);
             this.pbLoading.Name = "pbLoading";
             this.pbLoading.Size = new System.Drawing.Size(169, 94);
             this.pbLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -328,6 +328,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_PedidosSucursales";
             this.Text = "Requisiciones de Sucursales";
+            this.Load += new System.EventHandler(this.Frm_PedidosSucursales_Load);
             this.Shown += new System.EventHandler(this.Frm_PedidosSucursales_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.gridPedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridPedidoSucursalBindingSource)).EndInit();

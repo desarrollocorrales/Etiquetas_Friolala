@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Seguimiento_y_Control.Entity.Internet;
+using Seguimiento_y_Control.Clases.Configuracion;
 using Seguimiento_y_Control.Clases.Distribucion;
+using Seguimiento_y_Control.Clases.Utilitarias;
 using Seguimiento_y_Control.Distribucion.Reportes;
 using Seguimiento_y_Control.Entity;
-using Seguimiento_y_Control.Clases.Utilitarias;
-using Seguimiento_y_Control.Clases.Configuracion;
+using Seguimiento_y_Control.Entity.Internet;
 
 namespace Seguimiento_y_Control.Distribucion
 {
@@ -574,6 +573,11 @@ namespace Seguimiento_y_Control.Distribucion
             Entity.articulos Articulo
                 = SegContext.articulos.FirstOrDefault(o => o.clave == clave_articulo);
             return Articulo.id_bodega;
+        }
+
+        private void Frm_PedidosSucursales_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
