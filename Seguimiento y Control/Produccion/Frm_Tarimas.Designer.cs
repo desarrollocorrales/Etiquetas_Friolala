@@ -46,9 +46,16 @@
             this.btnBuscaArticulo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
+            this.pnlFooter = new System.Windows.Forms.Panel();
+            this.pnlEtiquetas = new System.Windows.Forms.Panel();
+            this.btnBuscarEtiqueta = new System.Windows.Forms.Button();
+            this.txbTarima = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridEtiquetas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.etiquetasTarimasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEtiquetas)).BeginInit();
+            this.pnlFooter.SuspendLayout();
+            this.pnlEtiquetas.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -58,21 +65,21 @@
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(734, 35);
+            this.lblTitulo.Size = new System.Drawing.Size(742, 35);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Crear Tarima ";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gridEtiquetas
             // 
-            this.gridEtiquetas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridEtiquetas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridEtiquetas.DataSource = this.etiquetasTarimasBindingSource;
             this.gridEtiquetas.Location = new System.Drawing.Point(13, 102);
             this.gridEtiquetas.MainView = this.gvEtiquetas;
             this.gridEtiquetas.Name = "gridEtiquetas";
-            this.gridEtiquetas.Size = new System.Drawing.Size(710, 366);
+            this.gridEtiquetas.Size = new System.Drawing.Size(710, 328);
             this.gridEtiquetas.TabIndex = 1;
             this.gridEtiquetas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvEtiquetas});
@@ -322,21 +329,70 @@
             // 
             this.btnCrear.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCrear.Enabled = false;
-            this.btnCrear.Location = new System.Drawing.Point(333, 474);
+            this.btnCrear.Location = new System.Drawing.Point(337, 11);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(69, 26);
             this.btnCrear.TabIndex = 9;
             this.btnCrear.Text = "Crear";
-            this.btnCrear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCrear.UseVisualStyleBackColor = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            // 
+            // pnlFooter
+            // 
+            this.pnlFooter.Controls.Add(this.btnCrear);
+            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlFooter.Location = new System.Drawing.Point(0, 475);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(742, 48);
+            this.pnlFooter.TabIndex = 10;
+            // 
+            // pnlEtiquetas
+            // 
+            this.pnlEtiquetas.Controls.Add(this.btnBuscarEtiqueta);
+            this.pnlEtiquetas.Controls.Add(this.txbTarima);
+            this.pnlEtiquetas.Controls.Add(this.label3);
+            this.pnlEtiquetas.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlEtiquetas.Location = new System.Drawing.Point(0, 436);
+            this.pnlEtiquetas.Name = "pnlEtiquetas";
+            this.pnlEtiquetas.Size = new System.Drawing.Size(742, 39);
+            this.pnlEtiquetas.TabIndex = 11;
+            // 
+            // btnBuscarEtiqueta
+            // 
+            this.btnBuscarEtiqueta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarEtiqueta.Location = new System.Drawing.Point(691, 6);
+            this.btnBuscarEtiqueta.Name = "btnBuscarEtiqueta";
+            this.btnBuscarEtiqueta.Size = new System.Drawing.Size(37, 26);
+            this.btnBuscarEtiqueta.TabIndex = 2;
+            this.btnBuscarEtiqueta.Text = "...";
+            this.btnBuscarEtiqueta.UseVisualStyleBackColor = true;
+            this.btnBuscarEtiqueta.Click += new System.EventHandler(this.btnBuscarEtiqueta_Click);
+            // 
+            // txbTarima
+            // 
+            this.txbTarima.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbTarima.Location = new System.Drawing.Point(230, 6);
+            this.txbTarima.Name = "txbTarima";
+            this.txbTarima.Size = new System.Drawing.Size(455, 26);
+            this.txbTarima.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(210, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Etiqueta de Tarima Seleccionada:";
             // 
             // Frm_Tarimas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 512);
-            this.Controls.Add(this.btnCrear);
+            this.ClientSize = new System.Drawing.Size(742, 523);
+            this.Controls.Add(this.pnlEtiquetas);
+            this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnBuscaArticulo);
             this.Controls.Add(this.label2);
@@ -355,6 +411,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridEtiquetas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.etiquetasTarimasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEtiquetas)).EndInit();
+            this.pnlFooter.ResumeLayout(false);
+            this.pnlEtiquetas.ResumeLayout(false);
+            this.pnlEtiquetas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +438,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colEtiqueta2;
         private DevExpress.XtraGrid.Columns.GridColumn colEtiqueta3;
         private DevExpress.XtraGrid.Columns.GridColumn colEtiqueta1;
+        private System.Windows.Forms.Panel pnlFooter;
+        private System.Windows.Forms.Panel pnlEtiquetas;
+        private System.Windows.Forms.Button btnBuscarEtiqueta;
+        private System.Windows.Forms.TextBox txbTarima;
+        private System.Windows.Forms.Label label3;
     }
 }

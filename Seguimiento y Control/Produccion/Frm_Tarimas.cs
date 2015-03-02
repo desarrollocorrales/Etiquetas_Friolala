@@ -19,6 +19,7 @@ namespace Seguimiento_y_Control.Produccion
     {
         private pedidos_internos oPedido;
         private articulos oArticulo;
+        private catalog_comandos_etiquetas ComandoContenedor;
 
         public Frm_Tarimas()
         {
@@ -172,8 +173,9 @@ namespace Seguimiento_y_Control.Produccion
                     SegContext.SaveChanges();
                 }
 
-                catalog_comandos_etiquetas oComando =
-                    SegContext.catalog_comandos_etiquetas.FirstOrDefault(o => o.etiqueta == "tarima");
+                catalog_comandos_etiquetas oComando = ComandoContenedor;
+                //catalog_comandos_etiquetas oComando =
+                //    SegContext.catalog_comandos_etiquetas.FirstOrDefault(o => o.etiqueta == "tarima");
                 
                 string sEtiquetaComando = 
                     ObtenerComandoContenedorUnProducto(NuevoPaquete, oComando, NuevoPaquete.cantidad,
@@ -241,8 +243,9 @@ namespace Seguimiento_y_Control.Produccion
                     SegContext.SaveChanges();
                 }
 
-                catalog_comandos_etiquetas oComando =
-                    SegContext.catalog_comandos_etiquetas.FirstOrDefault(o => o.etiqueta == "tarima");
+                catalog_comandos_etiquetas oComando = ComandoContenedor;
+                //catalog_comandos_etiquetas oComando =
+                //    SegContext.catalog_comandos_etiquetas.FirstOrDefault(o => o.etiqueta == "tarima");
 
                 string sEtiquetaComando =
                     ObtenerComandoContenedorVarios(NuevoPaquete, oComando, NuevoPaquete.cantidad);
@@ -362,7 +365,18 @@ namespace Seguimiento_y_Control.Produccion
 
         private void Frm_Tarimas_Load(object sender, EventArgs e)
         {
+            Frm_BuscarEtiquetas frmBuscarEtiqueta = new Frm_BuscarEtiquetas();
+            frmBuscarEtiqueta.ShowDialog();
+            txbTarima.Text = frmBuscarEtiqueta.TarimaSeleccionada.etiqueta.ToUpper();
+            ComandoContenedor = frmBuscarEtiqueta.TarimaSeleccionada;
+        }
 
+        private void btnBuscarEtiqueta_Click(object sender, EventArgs e)
+        {
+            Frm_BuscarEtiquetas frmBuscarEtiqueta = new Frm_BuscarEtiquetas();
+            frmBuscarEtiqueta.ShowDialog();
+            txbTarima.Text = frmBuscarEtiqueta.TarimaSeleccionada.etiqueta.ToUpper();
+            ComandoContenedor = frmBuscarEtiqueta.TarimaSeleccionada;
         }  
     }
 }

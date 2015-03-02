@@ -608,7 +608,6 @@ D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraGrid
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraLayout.v11.1.xml
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraNavBar.v11.1.xml
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraPivotGrid.v11.1.xml
-D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraReports.v11.1.xml
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraRichEdit.v11.1.xml
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe
