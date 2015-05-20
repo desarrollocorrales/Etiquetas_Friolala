@@ -612,4 +612,3 @@ D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraRich
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.pdb
-D:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.csprojResolveAssemblyReference.cache

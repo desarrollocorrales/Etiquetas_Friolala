@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Seguimiento_y_Control.Produccion;
 using Seguimiento_y_Control.Clases.Configuracion;
 using Seguimiento_y_Control.Entity;
 using Seguimiento_y_Control.Clases.Administracion;
@@ -21,7 +22,7 @@ namespace Seguimiento_y_Control.Administracion.Reimpresiones
         etiquetas Etiqueta;
         string sNumeroEtiqueta;        
         catalog_comandos_etiquetas oComando;
-        
+
         public Frm_ReimprimirEtiqueta()
         {
             InitializeComponent();
@@ -141,6 +142,7 @@ namespace Seguimiento_y_Control.Administracion.Reimpresiones
 
                 Seguimiento_ACC_Entities segContext = new Seguimiento_ACC_Entities();
 
+                SeleccionarEtiqueta();
                 string sComandoAImprimir = ObtenerComando(Etiqueta, oComando);
                 Imprimir(sComandoAImprimir);
 
@@ -196,6 +198,14 @@ namespace Seguimiento_y_Control.Administracion.Reimpresiones
             Seguimiento_ACC_Entities segContext = new Seguimiento_ACC_Entities();
             proveedores oProveedor = segContext.proveedores.FirstOrDefault(o => o.id_proveedor == id_proveedor);
             return oProveedor.nombre;
+        }
+
+        private void SeleccionarEtiqueta()
+        {
+            Frm_BuscarEtiquetas frmBuscarEtiqueta = new Frm_BuscarEtiquetas();
+            frmBuscarEtiqueta.ShowDialog();
+
+            oComando = frmBuscarEtiqueta.EtiquetaSeleccionada;
         }
     }
 }

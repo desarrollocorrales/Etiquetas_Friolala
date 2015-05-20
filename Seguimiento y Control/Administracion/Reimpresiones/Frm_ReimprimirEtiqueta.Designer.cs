@@ -57,7 +57,7 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(604, 35);
+            this.label2.Size = new System.Drawing.Size(612, 35);
             this.label2.TabIndex = 11;
             this.label2.Text = "Reimprimir Etiqueta";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 437);
+            this.ClientSize = new System.Drawing.Size(612, 448);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txbComentario);
