@@ -429,7 +429,8 @@ namespace Seguimiento_y_Control.Produccion
                 Comando = Comando.Replace("|piezas|", string.Empty);
 
             Comando = Comando.Replace("|numero_maquila|", txbLoteMaquila.Text);
-            
+            Comando = Comando.Replace("|FechaSacrificio|", dtpSacrificio.Value.ToString("dd/MMM/yyyy").ToUpper());
+
             return Comando;
         }
 
