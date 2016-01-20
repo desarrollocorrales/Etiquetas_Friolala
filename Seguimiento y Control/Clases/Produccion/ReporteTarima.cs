@@ -17,5 +17,6 @@ namespace Seguimiento_y_Control.Clases.Produccion
         public decimal Cantidad { set; get; }
         public string Unidad { set; get; }
         public DateTime FechaProduccion { set; get; }
+        public string Lote { set; get; }
     }
 }

@@ -63,6 +63,8 @@
             this.txbTarima = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txbLoteMaquila = new System.Windows.Forms.TextBox();
+            this.dtpSacrificio = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelPreview.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDnPiezas)).BeginInit();
@@ -95,7 +97,7 @@
             this.panelPreview.Enabled = false;
             this.panelPreview.Location = new System.Drawing.Point(0, 0);
             this.panelPreview.Name = "panelPreview";
-            this.panelPreview.Size = new System.Drawing.Size(672, 330);
+            this.panelPreview.Size = new System.Drawing.Size(664, 330);
             this.panelPreview.TabIndex = 13;
             // 
             // dtpEmpaque
@@ -103,7 +105,7 @@
             this.dtpEmpaque.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpEmpaque.CustomFormat = "dd/MM/yyyy";
             this.dtpEmpaque.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEmpaque.Location = new System.Drawing.Point(369, 83);
+            this.dtpEmpaque.Location = new System.Drawing.Point(365, 83);
             this.dtpEmpaque.Name = "dtpEmpaque";
             this.dtpEmpaque.Size = new System.Drawing.Size(92, 26);
             this.dtpEmpaque.TabIndex = 39;
@@ -112,7 +114,7 @@
             // 
             this.lblPara.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPara.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPara.Location = new System.Drawing.Point(94, 130);
+            this.lblPara.Location = new System.Drawing.Point(90, 130);
             this.lblPara.Name = "lblPara";
             this.lblPara.Size = new System.Drawing.Size(532, 20);
             this.lblPara.TabIndex = 38;
@@ -121,7 +123,7 @@
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.Location = new System.Drawing.Point(33, 130);
+            this.label8.Location = new System.Drawing.Point(29, 130);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 22);
             this.label8.TabIndex = 37;
@@ -132,7 +134,7 @@
             // 
             this.lblLote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLote.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLote.Location = new System.Drawing.Point(94, 150);
+            this.lblLote.Location = new System.Drawing.Point(90, 150);
             this.lblLote.Name = "lblLote";
             this.lblLote.Size = new System.Drawing.Size(80, 20);
             this.lblLote.TabIndex = 36;
@@ -141,7 +143,7 @@
             // lblLeyenda
             // 
             this.lblLeyenda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLeyenda.Location = new System.Drawing.Point(267, 110);
+            this.lblLeyenda.Location = new System.Drawing.Point(263, 110);
             this.lblLeyenda.Name = "lblLeyenda";
             this.lblLeyenda.Size = new System.Drawing.Size(371, 20);
             this.lblLeyenda.TabIndex = 34;
@@ -152,7 +154,7 @@
             // 
             this.lblCaducidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCaducidad.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaducidad.Location = new System.Drawing.Point(558, 90);
+            this.lblCaducidad.Location = new System.Drawing.Point(554, 90);
             this.lblCaducidad.Name = "lblCaducidad";
             this.lblCaducidad.Size = new System.Drawing.Size(80, 20);
             this.lblCaducidad.TabIndex = 33;
@@ -161,7 +163,7 @@
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.Location = new System.Drawing.Point(468, 90);
+            this.label13.Location = new System.Drawing.Point(464, 90);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(84, 20);
             this.label13.TabIndex = 32;
@@ -171,7 +173,7 @@
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.Location = new System.Drawing.Point(267, 90);
+            this.label11.Location = new System.Drawing.Point(263, 90);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(97, 20);
             this.label11.TabIndex = 30;
@@ -181,7 +183,7 @@
             // lblDomicilio
             // 
             this.lblDomicilio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDomicilio.Location = new System.Drawing.Point(267, 44);
+            this.lblDomicilio.Location = new System.Drawing.Point(263, 44);
             this.lblDomicilio.Name = "lblDomicilio";
             this.lblDomicilio.Size = new System.Drawing.Size(371, 36);
             this.lblDomicilio.TabIndex = 29;
@@ -192,7 +194,7 @@
             // lblNombreEmpresa
             // 
             this.lblNombreEmpresa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNombreEmpresa.Location = new System.Drawing.Point(267, 2);
+            this.lblNombreEmpresa.Location = new System.Drawing.Point(263, 2);
             this.lblNombreEmpresa.Name = "lblNombreEmpresa";
             this.lblNombreEmpresa.Size = new System.Drawing.Size(371, 39);
             this.lblNombreEmpresa.TabIndex = 28;
@@ -203,7 +205,7 @@
             // 
             this.lblArticulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblArticulo.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulo.Location = new System.Drawing.Point(36, 174);
+            this.lblArticulo.Location = new System.Drawing.Point(32, 174);
             this.lblArticulo.Name = "lblArticulo";
             this.lblArticulo.Size = new System.Drawing.Size(602, 26);
             this.lblArticulo.TabIndex = 27;
@@ -214,7 +216,7 @@
             // 
             this.lblClave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblClave.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClave.Location = new System.Drawing.Point(267, 148);
+            this.lblClave.Location = new System.Drawing.Point(263, 148);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(371, 26);
             this.lblClave.TabIndex = 26;
@@ -230,7 +232,7 @@
             this.panel2.Controls.Add(this.txbCantidad);
             this.panel2.Controls.Add(this.lblUnidad);
             this.panel2.Controls.Add(this.lblCantidadPeso);
-            this.panel2.Location = new System.Drawing.Point(267, 204);
+            this.panel2.Location = new System.Drawing.Point(263, 204);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(371, 116);
@@ -289,7 +291,7 @@
             // lbl
             // 
             this.lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl.Location = new System.Drawing.Point(33, 148);
+            this.lbl.Location = new System.Drawing.Point(29, 148);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(55, 22);
             this.lbl.TabIndex = 24;
@@ -300,7 +302,7 @@
             // 
             this.pbLogoEtiqueta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbLogoEtiqueta.Image = global::Seguimiento_y_Control.Properties.Resources.logoEtq;
-            this.pbLogoEtiqueta.Location = new System.Drawing.Point(33, 24);
+            this.pbLogoEtiqueta.Location = new System.Drawing.Point(29, 24);
             this.pbLogoEtiqueta.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbLogoEtiqueta.Name = "pbLogoEtiqueta";
             this.pbLogoEtiqueta.Size = new System.Drawing.Size(170, 70);
@@ -312,7 +314,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(33, 2);
+            this.label6.Location = new System.Drawing.Point(29, 2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 18);
             this.label6.TabIndex = 19;
@@ -323,7 +325,7 @@
             // 
             this.lblRazon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRazon.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRazon.Location = new System.Drawing.Point(33, 98);
+            this.lblRazon.Location = new System.Drawing.Point(29, 98);
             this.lblRazon.Name = "lblRazon";
             this.lblRazon.Size = new System.Drawing.Size(170, 22);
             this.lblRazon.TabIndex = 21;
@@ -334,7 +336,7 @@
             // 
             this.lblNumeroEtiqueta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNumeroEtiqueta.Font = new System.Drawing.Font("EAN-13", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroEtiqueta.Location = new System.Drawing.Point(33, 204);
+            this.lblNumeroEtiqueta.Location = new System.Drawing.Point(29, 204);
             this.lblNumeroEtiqueta.Name = "lblNumeroEtiqueta";
             this.lblNumeroEtiqueta.Size = new System.Drawing.Size(192, 116);
             this.lblNumeroEtiqueta.TabIndex = 35;
@@ -348,7 +350,7 @@
             // btnEtiqueta
             // 
             this.btnEtiqueta.AutoSize = true;
-            this.btnEtiqueta.Location = new System.Drawing.Point(196, 374);
+            this.btnEtiqueta.Location = new System.Drawing.Point(196, 354);
             this.btnEtiqueta.Name = "btnEtiqueta";
             this.btnEtiqueta.Size = new System.Drawing.Size(30, 28);
             this.btnEtiqueta.TabIndex = 20;
@@ -360,7 +362,7 @@
             // 
             this.txbEtiqueta.BackColor = System.Drawing.Color.White;
             this.txbEtiqueta.ForeColor = System.Drawing.Color.Black;
-            this.txbEtiqueta.Location = new System.Drawing.Point(12, 374);
+            this.txbEtiqueta.Location = new System.Drawing.Point(12, 354);
             this.txbEtiqueta.Name = "txbEtiqueta";
             this.txbEtiqueta.ReadOnly = true;
             this.txbEtiqueta.Size = new System.Drawing.Size(178, 26);
@@ -371,7 +373,7 @@
             this.btnTerminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTerminar.Image = global::Seguimiento_y_Control.Properties.Resources.close_icon30;
             this.btnTerminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTerminar.Location = new System.Drawing.Point(558, 426);
+            this.btnTerminar.Location = new System.Drawing.Point(550, 419);
             this.btnTerminar.Name = "btnTerminar";
             this.btnTerminar.Size = new System.Drawing.Size(102, 35);
             this.btnTerminar.TabIndex = 19;
@@ -385,7 +387,7 @@
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnImprimir.Image = global::Seguimiento_y_Control.Properties.Resources.Printer30;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(449, 426);
+            this.btnImprimir.Location = new System.Drawing.Point(441, 419);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(102, 35);
@@ -398,7 +400,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 353);
+            this.label1.Location = new System.Drawing.Point(12, 333);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 18);
             this.label1.TabIndex = 22;
@@ -407,7 +409,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 403);
+            this.label2.Location = new System.Drawing.Point(12, 383);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 18);
             this.label2.TabIndex = 24;
@@ -418,7 +420,7 @@
             // 
             this.txbTarima.BackColor = System.Drawing.Color.White;
             this.txbTarima.ForeColor = System.Drawing.Color.Black;
-            this.txbTarima.Location = new System.Drawing.Point(12, 424);
+            this.txbTarima.Location = new System.Drawing.Point(12, 404);
             this.txbTarima.Name = "txbTarima";
             this.txbTarima.ReadOnly = true;
             this.txbTarima.Size = new System.Drawing.Size(178, 26);
@@ -427,7 +429,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(376, 374);
+            this.label3.Location = new System.Drawing.Point(446, 339);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 18);
             this.label3.TabIndex = 26;
@@ -437,19 +439,39 @@
             // 
             this.txbLoteMaquila.BackColor = System.Drawing.Color.White;
             this.txbLoteMaquila.ForeColor = System.Drawing.Color.Black;
-            this.txbLoteMaquila.Location = new System.Drawing.Point(474, 368);
+            this.txbLoteMaquila.Location = new System.Drawing.Point(544, 336);
             this.txbLoteMaquila.Name = "txbLoteMaquila";
-            this.txbLoteMaquila.Size = new System.Drawing.Size(178, 26);
+            this.txbLoteMaquila.Size = new System.Drawing.Size(108, 26);
             this.txbLoteMaquila.TabIndex = 25;
             this.txbLoteMaquila.Text = "0";
             this.txbLoteMaquila.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // dtpSacrificio
+            // 
+            this.dtpSacrificio.CustomFormat = "dd/MM/yyyy";
+            this.dtpSacrificio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSacrificio.Location = new System.Drawing.Point(544, 368);
+            this.dtpSacrificio.Name = "dtpSacrificio";
+            this.dtpSacrificio.Size = new System.Drawing.Size(108, 26);
+            this.dtpSacrificio.TabIndex = 27;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(413, 374);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 18);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Fecha de Sacrificio:";
             // 
             // Frm_ImpPesoVariado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 473);
+            this.ClientSize = new System.Drawing.Size(664, 462);
             this.ControlBox = false;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dtpSacrificio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txbLoteMaquila);
             this.Controls.Add(this.label2);
@@ -517,5 +539,7 @@
         private System.Windows.Forms.TextBox txbTarima;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txbLoteMaquila;
+        private System.Windows.Forms.DateTimePicker dtpSacrificio;
+        private System.Windows.Forms.Label label4;
     }
 }

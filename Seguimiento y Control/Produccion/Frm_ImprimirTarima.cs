@@ -142,6 +142,7 @@ namespace Seguimiento_y_Control.Produccion
                     RenglonReporteTarima.Cantidad = PaqDetalle.etiquetas.cantidad;
                     RenglonReporteTarima.Unidad = PaqDetalle.etiquetas.unidad;
                     RenglonReporteTarima.FechaProduccion = PaqDetalle.etiquetas.fecha_empaque;
+                    RenglonReporteTarima.Lote = PaqDetalle.etiquetas.id_pedido.ToString();
                     SourceReporteTarima.Add(RenglonReporteTarima);
                 }
             }

@@ -612,3 +612,102 @@ D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraRich
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.pdb
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Seguimiento y Control.exe.config
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.pdb
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\logoEtq.jpg
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\LogoReportes.jpg
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\LogoSistema.jpg
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Seguimiento y Control.exe
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Seguimiento y Control.pdb
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.Charts.v11.1.Core.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.Data.v11.1.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.PivotGrid.v11.1.Core.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.Printing.v11.1.Core.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.RichEdit.v11.1.Core.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.Utils.v11.1.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraCharts.v11.1.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraEditors.v11.1.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraGrid.v11.1.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraLayout.v11.1.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraNavBar.v11.1.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraPivotGrid.v11.1.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraReports.v11.1.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraRichEdit.v11.1.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Microsoft.CSharp.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Microsoft.VisualBasic.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Data.DataSetExtensions.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Data.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Data.Entity.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Deployment.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Drawing.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Runtime.Serialization.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Security.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Windows.Forms.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Xml.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Xml.Linq.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.Data.v11.1.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.PivotGrid.v11.1.Core.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.RichEdit.v11.1.Core.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.Utils.v11.1.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraCharts.v11.1.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraEditors.v11.1.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraGrid.v11.1.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraLayout.v11.1.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraNavBar.v11.1.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraPivotGrid.v11.1.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraReports.v11.1.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraRichEdit.v11.1.xml
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.csprojResolveAssemblyReference.cache
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Areas.Frm_Areas.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Articulos.Frm_Articulos.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Bodegas.Frm_Bodegas.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Devoluciones.Frm_Devoluciones.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Frm_AdmImpresoras.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Articulos.Frm_ModificarArticulo.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Reimpresiones.Frm_Eliminar_Etiquetas.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Reimpresiones.Frm_ReimprimirEtiqueta.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Usuarios.Frm_Usuarios.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Distribucion.Frm_PedidosSucursales.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Distribucion.Frm_PedidosVendedores.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Distribucion.Reportes.ReportePedido.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Distribucion.Reportes.ReportePedidoVendedor.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Distribucion.Reportes.RequisicionSucursal.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Distribucion.Reportes.RequisicionVendedor.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Login.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.MDI_Principal.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Produccion.Frm_BuscarEtiquetas.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Produccion.Frm_CerrarPedidos.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Produccion.Frm_ImpPesoVariado.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Produccion.Frm_ImprimirTarima.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Produccion.Frm_Procesados.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Produccion.Frm_RequisicionesInternas.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Produccion.Frm_Tarimas.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Properties.Resources.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Reportes.Frm_ReporteMovimientos.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Reportes.xrpImprimirTarima.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Reportes.xrpReporteDeMovimientos.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Reportes.xrpReporteRecepcion.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Reportes.Frm_ReporteProduccion.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Reportes.Frm_ReporteRecepcion.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Reportes.xrpEntregaInterna.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Reportes.xrpEntregaVendedores.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Reportes.xrpMovimientosMercancia.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Reportes.xrpReporteProduccion.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Topos.EntregaExterna.Frm_EntregaExternaSucursales.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Topos.EntregaExterna.Frm_EntregaExternaVendedor.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Topos.EntregaExterna.Frm_EnvioEtiquetas.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Topos.EntregaMateraPrima.Frm_EntregaMateriaPrima.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Topos.RecepcionProveedores.Frm_CrearTarimas.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Topos.RecepcionProveedores.Frm_PrevioImprimir.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Topos.RecepcionProveedores.Frm_RecepcionInterna.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Topos.RecepcionProveedores.Frm_RecepcionProveedores.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Topos.Reimpresion.Frm_ReimprirSalida.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Utilidades.Frm_BuscarArticulo.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Utilidades.Frm_BuscarPedido.resources
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.csproj.GenerateResource.Cache
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe.licenses

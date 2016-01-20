@@ -134,6 +134,7 @@ namespace Seguimiento_y_Control.Produccion
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             ImprimirPesoVariado();            
         }
         private bool ValidarFechaEmpaque()
@@ -387,7 +388,9 @@ namespace Seguimiento_y_Control.Produccion
             Comando = Comando.Replace("|lblCantidadPeso|", lblCantidadPeso.Text);
             Comando = Comando.Replace("|pesoneto|", Convert.ToDecimal(txbCantidad.Text).ToString("#,#.###"));
             Comando = Comando.Replace("|unidad|", lblUnidad.Text);
+            Comando = Comando.Replace("|FechaSacrificio|", dtpSacrificio.Value.ToString("dd/MMM/yyyy").ToUpper());
             Comando = Comando.Replace("0000000000000", oEtiqueta.numero_etiqueta);
+
             if (numUpDnPiezas.Visible == true)
                 Comando = Comando.Replace("|piezas|", "Piezas: " + numUpDnPiezas.Value);
             else
