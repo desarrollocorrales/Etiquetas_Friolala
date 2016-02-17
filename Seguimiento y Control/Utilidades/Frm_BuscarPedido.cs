@@ -34,19 +34,53 @@ namespace Seguimiento_y_Control.Utilidades
 
         private void cargarComboPedidos()
         {
-            Seguimiento_ACC_Entities Contexto = new Seguimiento_ACC_Entities();
-            if (id_usuario != 0)
-                SourcePedidos = Contexto.pedidos_internos.Where(o => o.estatus == "A" && o.id_usuario == id_usuario).ToList();
-            else
-                SourcePedidos = Contexto.pedidos_internos.Where(o => o.estatus == "A").ToList();
-            cbPedidos.DataSource = SourcePedidos;
-            cbPedidos.DisplayMember = "codigo_pedido";
+            try
+            {
+                SourcePedidos = new List<pedidos_internos>();
+                Seguimiento_ACC_Entities Contexto = new Seguimiento_ACC_Entities();
+                /***************** Mostrar los pedidos a usuarios del mismo departamento *******************/
+                usuarios _user = Contexto.usuarios.FirstOrDefault(o => o.id_usuario == id_usuario);
+                List<usuarios> _lstUsuarios = Contexto.usuarios.Where(o => o.id_area == _user.id_area).ToList();
+                List<pedidos_internos> _pedidos = new List<pedidos_internos>();
+
+                foreach (usuarios usr in _lstUsuarios)
+                {
+                    _pedidos = Contexto.pedidos_internos.Where(o => o.estatus == "A" && o.id_usuario == usr.id_usuario).ToList();
+                    SourcePedidos.AddRange(_pedidos);
+                }
+                /*******************************************************************************************/
+
+                /*if (id_usuario != 0)
+                    SourcePedidos = Contexto.pedidos_internos.Where(o => o.estatus == "A" && o.id_usuario == id_usuario).ToList();
+                else
+                    SourcePedidos = Contexto.pedidos_internos.Where(o => o.estatus == "A").ToList();*/
+
+                cbPedidos.DataSource = SourcePedidos.OrderBy(o=>o.id_pedido).ToList();
+                cbPedidos.DisplayMember = "codigo_pedido";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void CerrarPedidos()
         {
             Seguimiento_ACC_Entities Contexto = new Seguimiento_ACC_Entities();
-            List<pedidos_internos> ListPedidosAbiertos = Contexto.pedidos_internos.Where(o => o.estatus == "A" && o.id_usuario == id_usuario).ToList();
+
+            /***************** Mostrar los pedidos a usuarios del mismo departamento *******************/
+            usuarios _user = Contexto.usuarios.FirstOrDefault(o => o.id_usuario == id_usuario);
+            List<usuarios> _lstUsuarios = Contexto.usuarios.Where(o => o.id_area == _user.id_area).ToList();
+            List<pedidos_internos> _pedidos = new List<pedidos_internos>();
+            List<pedidos_internos> ListPedidosAbiertos = new List<pedidos_internos>();
+
+            foreach (usuarios usr in _lstUsuarios)
+            {
+                _pedidos = Contexto.pedidos_internos.Where(o => o.estatus == "A" && o.id_usuario == usr.id_usuario).ToList();
+                ListPedidosAbiertos.AddRange(_pedidos);
+            }
+            /*******************************************************************************************/
+            ListPedidosAbiertos = ListPedidosAbiertos.OrderBy(o => o.id_pedido).ToList();
 
             foreach (pedidos_internos oPedido in ListPedidosAbiertos)
             {

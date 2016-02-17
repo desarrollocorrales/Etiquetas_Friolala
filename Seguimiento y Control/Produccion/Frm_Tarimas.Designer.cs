@@ -38,6 +38,7 @@
             this.colEtiqueta1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEtiqueta2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEtiqueta3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEtiqueta4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txbNumPedido = new System.Windows.Forms.TextBox();
             this.btnBuscaPedido = new System.Windows.Forms.Button();
@@ -205,13 +206,16 @@
             this.colEtiqueta,
             this.colEtiqueta1,
             this.colEtiqueta2,
-            this.colEtiqueta3});
+            this.colEtiqueta3,
+            this.colEtiqueta4});
             this.gvEtiquetas.GridControl = this.gridEtiquetas;
+            this.gvEtiquetas.GroupCount = 1;
             this.gvEtiquetas.Name = "gvEtiquetas";
-            this.gvEtiquetas.OptionsCustomization.AllowGroup = false;
             this.gvEtiquetas.OptionsView.EnableAppearanceEvenRow = true;
             this.gvEtiquetas.OptionsView.EnableAppearanceOddRow = true;
-            this.gvEtiquetas.OptionsView.ShowGroupPanel = false;
+            this.gvEtiquetas.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colEtiqueta4, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gvEtiquetas.EndGrouping += new System.EventHandler(this.gvEtiquetas_EndGrouping);
             // 
             // colChecked
             // 
@@ -256,6 +260,14 @@
             this.colEtiqueta3.OptionsColumn.AllowEdit = false;
             this.colEtiqueta3.Visible = true;
             this.colEtiqueta3.VisibleIndex = 4;
+            // 
+            // colEtiqueta4
+            // 
+            this.colEtiqueta4.Caption = "Usuario";
+            this.colEtiqueta4.FieldName = "Usuario";
+            this.colEtiqueta4.Name = "colEtiqueta4";
+            this.colEtiqueta4.Visible = true;
+            this.colEtiqueta4.VisibleIndex = 5;
             // 
             // label1
             // 
@@ -443,5 +455,6 @@
         private System.Windows.Forms.Button btnBuscarEtiqueta;
         private System.Windows.Forms.TextBox txbTarima;
         private System.Windows.Forms.Label label3;
+        private DevExpress.XtraGrid.Columns.GridColumn colEtiqueta4;
     }
 }

@@ -90,6 +90,8 @@ namespace Seguimiento_y_Control.Produccion
                 }
             }
 
+            SourceGrid = AsignarUsuarioEtiqueta(SourceGrid, segContext.usuarios.ToList());
+
             gridEtiquetas.DataSource = SourceGrid;
             gvEtiquetas.BestFitColumns();
 
@@ -97,6 +99,21 @@ namespace Seguimiento_y_Control.Produccion
                 btnCrear.Enabled = false;
             else 
                 btnCrear.Enabled = true;
+        }
+        private List<EtiquetasTarimas> AsignarUsuarioEtiqueta(List<EtiquetasTarimas> pEtiquetas, List<usuarios>pUsuarios)
+        {
+            List<EtiquetasTarimas> _lstEtiquetas = new List<EtiquetasTarimas>();
+            
+            EtiquetasTarimas nuevaET;
+            foreach (EtiquetasTarimas et in pEtiquetas)
+            {
+                nuevaET = new EtiquetasTarimas();
+                nuevaET.Etiqueta = et.Etiqueta;
+                nuevaET.Usuario = pUsuarios.FirstOrDefault(o => o.id_usuario == et.Etiqueta.id_usuario).nombre;
+                _lstEtiquetas.Add(nuevaET);
+            }
+
+            return _lstEtiquetas;
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -377,6 +394,11 @@ namespace Seguimiento_y_Control.Produccion
             frmBuscarEtiqueta.ShowDialog();
             txbTarima.Text = frmBuscarEtiqueta.TarimaSeleccionada.etiqueta.ToUpper();
             ComandoContenedor = frmBuscarEtiqueta.TarimaSeleccionada;
+        }
+
+        private void gvEtiquetas_EndGrouping(object sender, EventArgs e)
+        {
+            (sender as DevExpress.XtraGrid.Views.Grid.GridView).ExpandAllGroups();
         }  
     }
 }

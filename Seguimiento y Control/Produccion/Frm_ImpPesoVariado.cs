@@ -25,6 +25,7 @@ namespace Seguimiento_y_Control.Produccion
         private List<etiquetas> ListEtiquetas;
         private StringBuilder sbComandos;
         private string sUnidadPaquete;
+        private DateTime fechaCaducidad;
 
         private catalog_comandos_etiquetas ComandoEtiqueta;
         private catalog_comandos_etiquetas ComandoContenedor;
@@ -171,6 +172,7 @@ namespace Seguimiento_y_Control.Produccion
         {
             lblLote.Text = sLote;
             lblCaducidad.Text = dtpEmpaque.Value.AddDays(oArticulo.dias_caducidad).ToString("dd/MM/yyyy");
+            fechaCaducidad = dtpEmpaque.Value.AddDays(oArticulo.dias_caducidad);
             lblClave.Text = oArticulo.clave;
             lblArticulo.Text = oArticulo.articulo;
             lblUnidad.Text = oArticulo.unidad;
@@ -387,15 +389,30 @@ namespace Seguimiento_y_Control.Produccion
             Comando = Comando.Replace("|articulo|", lblArticulo.Text);
             Comando = Comando.Replace("|lblCantidadPeso|", lblCantidadPeso.Text);
             Comando = Comando.Replace("|pesoneto|", Convert.ToDecimal(txbCantidad.Text).ToString("#,#.###"));
-            Comando = Comando.Replace("|unidad|", lblUnidad.Text);
-            Comando = Comando.Replace("|FechaSacrificio|", dtpSacrificio.Value.ToString("dd/MMM/yyyy").ToUpper());
+            Comando = Comando.Replace("|unidad|", lblUnidad.Text);            
             Comando = Comando.Replace("0000000000000", oEtiqueta.numero_etiqueta);
 
             if (numUpDnPiezas.Visible == true)
                 Comando = Comando.Replace("|piezas|", "Piezas: " + numUpDnPiezas.Value);
             else
                 Comando = Comando.Replace("|piezas|", string.Empty);
+            
             Comando = Comando.Replace("|numero_maquila|", txbLoteMaquila.Text);
+            Comando = Comando.Replace("|FechaSacrificio|", dtpSacrificio.Value.ToString("dd/MMM/yyyy").ToUpper());
+
+            /*************************************************************************************************************/
+            Comando = Comando.Replace("(3100)000000", "(3102)" + txbCantidad.Text.Replace(".", "").PadLeft(6, '0'));
+            Comando = Comando.Replace("3100000000", "3102" + txbCantidad.Text.Replace(".", "").PadLeft(6, '0'));
+
+            Comando = Comando.Replace("(10)00000", "(10)" + lblLote.Text.PadLeft(5, '0'));
+            Comando = Comando.Replace("1000000", "10" + lblLote.Text.PadLeft(5, '0'));
+
+            Comando = Comando.Replace("(17)000000", "(17)" + fechaCaducidad.ToString("yyMMdd"));
+            Comando = Comando.Replace("17000000", "17" + fechaCaducidad.ToString("yyMMdd"));
+
+            Comando = Comando.Replace("(13)000000", "(13)" + dtpEmpaque.Value.ToString("yyMMdd"));
+            Comando = Comando.Replace("13000000", "13" + dtpEmpaque.Value.ToString("yyMMdd"));
+            /**************************************************************************************************************/
 
             return Comando;
         }
@@ -431,6 +448,19 @@ namespace Seguimiento_y_Control.Produccion
             Comando = Comando.Replace("|numero_maquila|", txbLoteMaquila.Text);
             Comando = Comando.Replace("|FechaSacrificio|", dtpSacrificio.Value.ToString("dd/MMM/yyyy").ToUpper());
 
+            /*************************************************************************************************************/
+            Comando = Comando.Replace("(3100)000000", "(3102)" + dCantidad.ToString().Replace(".", "").PadLeft(6, '0'));
+            Comando = Comando.Replace("3100000000", "3102" + dCantidad.ToString().Replace(".", "").PadLeft(6, '0'));
+
+            Comando = Comando.Replace("(10)00000", "(10)" + lblLote.Text.PadLeft(6, '0'));
+            Comando = Comando.Replace("1000000", "10" + lblLote.Text.PadLeft(6, '0'));
+
+            Comando = Comando.Replace("(17)000000", "(17)" + fechaCaducidad.ToString("yyMMdd"));
+            Comando = Comando.Replace("17000000", "17" + fechaCaducidad.ToString("yyMMdd"));
+
+            Comando = Comando.Replace("(13)000000", "(13)" + dtpEmpaque.Value.ToString("yyMMdd"));
+            Comando = Comando.Replace("13000000", "13" + dtpEmpaque.Value.ToString("yyMMdd"));
+            /**************************************************************************************************************/
             return Comando;
         }
 
@@ -534,11 +564,6 @@ namespace Seguimiento_y_Control.Produccion
             txbTarima.Text = frmBuscarEtiqueta.TarimaSeleccionada.etiqueta.ToUpper();
             ComandoEtiqueta = frmBuscarEtiqueta.EtiquetaSeleccionada;
             ComandoContenedor = frmBuscarEtiqueta.TarimaSeleccionada;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

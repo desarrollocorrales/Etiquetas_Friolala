@@ -10,5 +10,6 @@ namespace Seguimiento_y_Control.Clases.Produccion
     {
         public bool Checked { get; set; }
         public etiquetas Etiqueta { set; get; }
+        public string Usuario { set; get; }
     }
 }

@@ -109,6 +109,7 @@
             this.dtpEmpaque.Name = "dtpEmpaque";
             this.dtpEmpaque.Size = new System.Drawing.Size(92, 26);
             this.dtpEmpaque.TabIndex = 39;
+            this.dtpEmpaque.ValueChanged += new System.EventHandler(this.dtpEmpaque_ValueChanged);
             // 
             // lblPara
             // 
@@ -373,7 +374,7 @@
             this.btnTerminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTerminar.Image = global::Seguimiento_y_Control.Properties.Resources.close_icon30;
             this.btnTerminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTerminar.Location = new System.Drawing.Point(550, 419);
+            this.btnTerminar.Location = new System.Drawing.Point(550, 415);
             this.btnTerminar.Name = "btnTerminar";
             this.btnTerminar.Size = new System.Drawing.Size(102, 35);
             this.btnTerminar.TabIndex = 19;
@@ -387,7 +388,7 @@
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnImprimir.Image = global::Seguimiento_y_Control.Properties.Resources.Printer30;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(441, 419);
+            this.btnImprimir.Location = new System.Drawing.Point(441, 415);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(102, 35);
@@ -414,7 +415,6 @@
             this.label2.Size = new System.Drawing.Size(109, 18);
             this.label2.TabIndex = 24;
             this.label2.Text = "Etiqueta Master:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txbTarima
             // 

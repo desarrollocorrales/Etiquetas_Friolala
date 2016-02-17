@@ -1612,7 +1612,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Seguimiento y Control"
         "ProductCode" = "8:{04FC395E-D110-40BD-915C-9F07D0FF2E86}"
-        "PackageCode" = "8:{2D29DCC4-8D7D-4130-9C03-F3ED845771FF}"
+        "PackageCode" = "8:{8F399781-32EA-49C6-BF00-FEFDCA4463E5}"
         "UpgradeCode" = "8:{E7DA47A5-EA1A-4268-A9B4-CA5440445052}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
