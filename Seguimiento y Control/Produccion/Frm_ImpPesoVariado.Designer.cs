@@ -208,7 +208,7 @@
             this.lblArticulo.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArticulo.Location = new System.Drawing.Point(32, 174);
             this.lblArticulo.Name = "lblArticulo";
-            this.lblArticulo.Size = new System.Drawing.Size(602, 26);
+            this.lblArticulo.Size = new System.Drawing.Size(602, 45);
             this.lblArticulo.TabIndex = 27;
             this.lblArticulo.Text = "Articulo";
             this.lblArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -233,16 +233,16 @@
             this.panel2.Controls.Add(this.txbCantidad);
             this.panel2.Controls.Add(this.lblUnidad);
             this.panel2.Controls.Add(this.lblCantidadPeso);
-            this.panel2.Location = new System.Drawing.Point(263, 204);
+            this.panel2.Location = new System.Drawing.Point(263, 223);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(371, 116);
+            this.panel2.Size = new System.Drawing.Size(371, 97);
             this.panel2.TabIndex = 25;
             // 
             // numUpDnPiezas
             // 
             this.numUpDnPiezas.Enabled = false;
-            this.numUpDnPiezas.Location = new System.Drawing.Point(317, 9);
+            this.numUpDnPiezas.Location = new System.Drawing.Point(326, 2);
             this.numUpDnPiezas.Name = "numUpDnPiezas";
             this.numUpDnPiezas.Size = new System.Drawing.Size(40, 26);
             this.numUpDnPiezas.TabIndex = 40;
@@ -251,7 +251,7 @@
             // 
             this.lblPiezas.AutoSize = true;
             this.lblPiezas.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPiezas.Location = new System.Drawing.Point(260, 11);
+            this.lblPiezas.Location = new System.Drawing.Point(269, 4);
             this.lblPiezas.Name = "lblPiezas";
             this.lblPiezas.Size = new System.Drawing.Size(51, 18);
             this.lblPiezas.TabIndex = 16;
@@ -261,7 +261,7 @@
             // txbCantidad
             // 
             this.txbCantidad.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCantidad.Location = new System.Drawing.Point(16, 40);
+            this.txbCantidad.Location = new System.Drawing.Point(25, 26);
             this.txbCantidad.MaxLength = 9;
             this.txbCantidad.Name = "txbCantidad";
             this.txbCantidad.Size = new System.Drawing.Size(243, 66);
@@ -272,7 +272,7 @@
             // lblUnidad
             // 
             this.lblUnidad.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidad.Location = new System.Drawing.Point(265, 77);
+            this.lblUnidad.Location = new System.Drawing.Point(274, 63);
             this.lblUnidad.Name = "lblUnidad";
             this.lblUnidad.Size = new System.Drawing.Size(92, 29);
             this.lblUnidad.TabIndex = 15;
@@ -283,7 +283,7 @@
             // 
             this.lblCantidadPeso.AutoSize = true;
             this.lblCantidadPeso.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadPeso.Location = new System.Drawing.Point(12, 14);
+            this.lblCantidadPeso.Location = new System.Drawing.Point(3, 0);
             this.lblCantidadPeso.Name = "lblCantidadPeso";
             this.lblCantidadPeso.Size = new System.Drawing.Size(93, 23);
             this.lblCantidadPeso.TabIndex = 12;
@@ -388,7 +388,7 @@
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnImprimir.Image = global::Seguimiento_y_Control.Properties.Resources.Printer30;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(441, 415);
+            this.btnImprimir.Location = new System.Drawing.Point(441, 414);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(102, 35);

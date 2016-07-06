@@ -612,12 +612,10 @@ D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraRich
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe
 D:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.pdb
-G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Seguimiento y Control.exe.config
-G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe
-G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.pdb
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\logoEtq.jpg
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\LogoReportes.jpg
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\LogoSistema.jpg
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Seguimiento y Control.exe.config
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Seguimiento y Control.exe
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Seguimiento y Control.pdb
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.Charts.v11.1.Core.dll
@@ -662,7 +660,6 @@ G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraPivo
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraReports.v11.1.xml
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraRichEdit.v11.1.xml
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll
-G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.csprojResolveAssemblyReference.cache
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Areas.Frm_Areas.resources
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Articulos.Frm_Articulos.resources
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Administracion.Bodegas.Frm_Bodegas.resources
@@ -711,3 +708,5 @@ G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_C
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento_y_Control.Utilidades.Frm_BuscarPedido.resources
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.csproj.GenerateResource.Cache
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe.licenses
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.pdb

@@ -380,23 +380,24 @@ namespace Seguimiento_y_Control.Produccion
         private string ObtenerComando(etiquetas oEtiqueta, catalog_comandos_etiquetas oCommand)
         {
             string Comando = oCommand.comando;
+
             Comando = Comando.Replace("|empaque|", dtpEmpaque.Value.ToString("dd/MM/yyyy") + " " + getFechaServer().ToString("HH:mm"));
             Comando = Comando.Replace("|caducidad|", lblCaducidad.Text);
             Comando = Comando.Replace("|leyenda|", lblLeyenda.Text);
             Comando = Comando.Replace("|clave|", lblClave.Text);
             Comando = Comando.Replace("|para|", lblPara.Text);
             Comando = Comando.Replace("|lote|", lblLote.Text);
-            Comando = Comando.Replace("|articulo|", lblArticulo.Text);
+            
             Comando = Comando.Replace("|lblCantidadPeso|", lblCantidadPeso.Text);
             Comando = Comando.Replace("|pesoneto|", Convert.ToDecimal(txbCantidad.Text).ToString("#,#.###"));
-            Comando = Comando.Replace("|unidad|", lblUnidad.Text);            
+            Comando = Comando.Replace("|unidad|", lblUnidad.Text);
             Comando = Comando.Replace("0000000000000", oEtiqueta.numero_etiqueta);
 
             if (numUpDnPiezas.Visible == true)
                 Comando = Comando.Replace("|piezas|", "Piezas: " + numUpDnPiezas.Value);
             else
                 Comando = Comando.Replace("|piezas|", string.Empty);
-            
+
             Comando = Comando.Replace("|numero_maquila|", txbLoteMaquila.Text);
             Comando = Comando.Replace("|FechaSacrificio|", dtpSacrificio.Value.ToString("dd/MMM/yyyy").ToUpper());
 
@@ -414,6 +415,29 @@ namespace Seguimiento_y_Control.Produccion
             Comando = Comando.Replace("13000000", "13" + dtpEmpaque.Value.ToString("yyMMdd"));
             /**************************************************************************************************************/
 
+            /**************************************************************************************************************/
+            if (lblArticulo.Text.Contains("//"))
+            {
+                //Es un articulo con 2 nombres
+                lblArticulo.Text.Replace("//", "*");
+                string[] nombres = lblArticulo.Text.Split('*');
+                string nombre_en_ingles = nombres[0];
+                string nombre_en_español = nombres[1];
+                
+
+                decimal peso_en_libras = (decimal)2.20462 * Convert.ToDecimal(txbCantidad.Text);
+
+                Comando = Comando.Replace("|articulo|", nombre_en_español);
+                Comando = Comando.Replace("|articulo_ingles|", nombre_en_ingles);
+                Comando = Comando.Replace("|pesoneto_libras|", peso_en_libras.ToString("#,#.###"));
+            }
+            else
+            {
+                //Es un articulo Normal
+                Comando = Comando.Replace("|articulo|", lblArticulo.Text);
+            }
+            /**************************************************************************************************************/
+            
             return Comando;
         }
 
