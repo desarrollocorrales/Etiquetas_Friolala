@@ -419,10 +419,10 @@ namespace Seguimiento_y_Control.Produccion
             if (lblArticulo.Text.Contains("//"))
             {
                 //Es un articulo con 2 nombres
-                lblArticulo.Text.Replace("//", "*");
-                string[] nombres = lblArticulo.Text.Split('*');
-                string nombre_en_ingles = nombres[0];
-                string nombre_en_español = nombres[1];
+                string ArticuloNombre = lblArticulo.Text.Replace("//", "*");
+                string[] nombres = ArticuloNombre.Split('*');                
+                string nombre_en_español = nombres[0];
+                string nombre_en_ingles = nombres[1];
                 
 
                 decimal peso_en_libras = (decimal)2.20462 * Convert.ToDecimal(txbCantidad.Text);

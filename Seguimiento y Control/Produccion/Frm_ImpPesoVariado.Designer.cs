@@ -388,7 +388,7 @@
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnImprimir.Image = global::Seguimiento_y_Control.Properties.Resources.Printer30;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(441, 414);
+            this.btnImprimir.Location = new System.Drawing.Point(441, 415);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(102, 35);
