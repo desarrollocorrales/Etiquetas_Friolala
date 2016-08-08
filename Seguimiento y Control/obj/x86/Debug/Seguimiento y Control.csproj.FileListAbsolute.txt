@@ -710,4 +710,3 @@ G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y C
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe.licenses
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.pdb
-G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.csprojResolveAssemblyReference.cache

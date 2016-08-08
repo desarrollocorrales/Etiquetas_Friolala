@@ -14,7 +14,7 @@ using Seguimiento_y_Control.Clases.Utilitarias;
 namespace Seguimiento_y_Control.Produccion
 {
     public partial class Frm_Procesados : Form
-    {        
+    {
         private bodegas oBodega;
         private articulos oArticulo;
         private string sUnidadPaquete;

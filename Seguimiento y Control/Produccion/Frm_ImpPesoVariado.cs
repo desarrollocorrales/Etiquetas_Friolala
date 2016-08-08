@@ -17,6 +17,8 @@ namespace Seguimiento_y_Control.Produccion
 {
     public partial class Frm_ImpPesoVariado : Form
     {
+        private int iConsecutivo;
+        private bool bConsecutivo;
         private string sLote;
         private bodegas oBodega;
         private articulos oArticulo;
@@ -39,6 +41,8 @@ namespace Seguimiento_y_Control.Produccion
             iContadorEtiquetas = 0;
             oBodega = pBodega;
             ListEtiquetas = new List<etiquetas>();
+            bConsecutivo = false;
+            iConsecutivo = 0;
         }
 
         private void btnTerminar_Click(object sender, EventArgs e)
@@ -307,7 +311,23 @@ namespace Seguimiento_y_Control.Produccion
             {
                 //Generar la Etiqueta del Producto
                 etiquetas NuevaEtiqueta = CrearEtiqueta();
-                Comando = ObtenerComando(NuevaEtiqueta, ComandoEtiqueta);
+                iConsecutivo = 0;
+
+                //Si la etiqueta es beefmar buscar consecutivo
+                if (ComandoEtiqueta.etiqueta.Trim().ToUpper() == "Beefmar".ToUpper())
+                {
+                    if (bConsecutivo == false)
+                    {
+                        iConsecutivo = Contexto.etiquetas.ToList().FindAll(o => o.id_pedido == NuevaEtiqueta.id_pedido).Count;
+                        bConsecutivo = true;
+                    }
+                    else
+                    {
+                        iConsecutivo++;
+                    }
+                }
+
+                Comando = ObtenerComando(NuevaEtiqueta, ComandoEtiqueta, iConsecutivo);
                 Imprimir(Comando);
 
                 Contexto.SaveChanges();
@@ -377,7 +397,7 @@ namespace Seguimiento_y_Control.Produccion
  
         #region *** Impresion ***
 
-        private string ObtenerComando(etiquetas oEtiqueta, catalog_comandos_etiquetas oCommand)
+        private string ObtenerComando(etiquetas oEtiqueta, catalog_comandos_etiquetas oCommand, int consecutivo = 0)
         {
             string Comando = oCommand.comando;
 
@@ -438,6 +458,12 @@ namespace Seguimiento_y_Control.Produccion
             }
             /**************************************************************************************************************/
             
+            /**************************************************************************************************************/
+            Comando = Comando.Replace("LLLLL", lblLote.Text.PadLeft(5, '0'));
+            Comando = Comando.Replace("CCC.CC", Convert.ToDecimal(txbCantidad.Text).ToString("0.00").PadLeft(6, '0'));
+            Comando = Comando.Replace("FFFFFF", dtpEmpaque.Value.ToString("ddMMyy"));
+            Comando = Comando.Replace("NNNN", Convert.ToInt32(consecutivo).ToString().PadLeft(4, '0'));
+            /**************************************************************************************************************/
             return Comando;
         }
 
