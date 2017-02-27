@@ -189,7 +189,7 @@ namespace Seguimiento_y_Control.Produccion
             else
             {
                 lblLeyenda.Visible = true;
-                if (oArticulo.dias_caducidad > 1 && oArticulo.dias_caducidad < 31)
+                if (oArticulo.dias_caducidad > 1 && oArticulo.dias_caducidad < 46)
                     lblLeyenda.Text = "MANTENGASE EN REFRIGERACION";
                 else
                     lblLeyenda.Text = "MANTENGASE EN CONGELACION";
@@ -459,10 +459,12 @@ namespace Seguimiento_y_Control.Produccion
             /**************************************************************************************************************/
             
             /**************************************************************************************************************/
-            Comando = Comando.Replace("LLLLL", lblLote.Text.PadLeft(5, '0'));
-            Comando = Comando.Replace("CCC.CC", Convert.ToDecimal(txbCantidad.Text).ToString("0.00").PadLeft(6, '0'));
-            Comando = Comando.Replace("FFFFFF", dtpEmpaque.Value.ToString("ddMMyy"));
-            Comando = Comando.Replace("NNNN", Convert.ToInt32(consecutivo).ToString().PadLeft(4, '0'));
+            Comando = Comando.Replace("XXXX", lblClave.Text); //codigo
+            Comando = Comando.Replace("LLLLL", lblLote.Text.PadLeft(5, '0')); // lote
+            Comando = Comando.Replace("CCC.CC", Convert.ToDecimal(txbCantidad.Text).ToString("0.00").PadLeft(6, '0')); // cantidad
+            Comando = Comando.Replace("FFFFFF", dtpEmpaque.Value.ToString("ddMMyy")); // fecha
+            Comando = Comando.Replace("GGGGGGGG", dtpEmpaque.Value.ToString("ddMMyyyy")); // fecha
+            Comando = Comando.Replace("NNNN", Convert.ToInt32(consecutivo).ToString().PadLeft(4, '0')); //consecutivo
             /**************************************************************************************************************/
             return Comando;
         }

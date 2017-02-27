@@ -635,7 +635,6 @@ G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\DevExpress.XtraRich
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Microsoft.CSharp.dll
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Microsoft.VisualBasic.dll
-G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Data.DataSetExtensions.dll
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Data.dll
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\bin\Debug\System.Data.Entity.dll
@@ -710,3 +709,4 @@ G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y C
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe.licenses
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.exe
 G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.pdb
+G:\Github\Etiquetas_Friolala\Seguimiento y Control\obj\x86\Debug\Seguimiento y Control.csprojResolveAssemblyReference.cache

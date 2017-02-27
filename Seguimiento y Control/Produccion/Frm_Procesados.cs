@@ -75,7 +75,7 @@ namespace Seguimiento_y_Control.Produccion
             else
             {
                 lblLeyenda.Visible = true;
-                if (oArticulo.dias_caducidad >1 && oArticulo.dias_caducidad < 31)
+                if (oArticulo.dias_caducidad >1 && oArticulo.dias_caducidad < 46)
                     lblLeyenda.Text = "MANTENGASE EN REFRIGERACION";
                 else
                     lblLeyenda.Text = "MANTENGASE EN CONGELACION";

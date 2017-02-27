@@ -196,7 +196,7 @@ namespace Seguimiento_y_Control.Administracion.Articulos
             if (txbCaducidad.Text != string.Empty)
             {
                 int iDiasCaducidad = Convert.ToInt32(txbCaducidad.Text);
-                if (iDiasCaducidad > 30)
+                if (iDiasCaducidad > 45)
                     chbxLeyenda.Text = "Mantengase en Congelación";
                 else
                     chbxLeyenda.Text = "Mantengase en Refrigeración";
