@@ -189,7 +189,7 @@
             this.lblDomicilio.Size = new System.Drawing.Size(371, 36);
             this.lblDomicilio.TabIndex = 29;
             this.lblDomicilio.Text = "Segunda de Selenio y Estaño s/n Cd. Industrial cp 34208 Durango, Dgo. Tel: 01 618" +
-                " 8 14 15 15";
+    " 8 14 15 15";
             this.lblDomicilio.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblNombreEmpresa
@@ -374,7 +374,7 @@
             this.btnTerminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTerminar.Image = global::Seguimiento_y_Control.Properties.Resources.close_icon30;
             this.btnTerminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTerminar.Location = new System.Drawing.Point(550, 408);
+            this.btnTerminar.Location = new System.Drawing.Point(550, 414);
             this.btnTerminar.Name = "btnTerminar";
             this.btnTerminar.Size = new System.Drawing.Size(102, 35);
             this.btnTerminar.TabIndex = 19;
@@ -388,7 +388,7 @@
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnImprimir.Image = global::Seguimiento_y_Control.Properties.Resources.Printer30;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(441, 407);
+            this.btnImprimir.Location = new System.Drawing.Point(441, 413);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(102, 35);
