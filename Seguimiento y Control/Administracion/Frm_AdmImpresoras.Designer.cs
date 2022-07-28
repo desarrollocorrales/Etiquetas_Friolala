@@ -36,6 +36,10 @@
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbEtiquetaProd = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbBasculas = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridImpresoras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.impresoraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvImpresoras)).BeginInit();
@@ -43,16 +47,16 @@
             // 
             // gridImpresoras
             // 
-            this.gridImpresoras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridImpresoras.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridImpresoras.DataSource = this.impresoraBindingSource;
             this.gridImpresoras.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridImpresoras.Location = new System.Drawing.Point(16, 39);
+            this.gridImpresoras.Location = new System.Drawing.Point(13, 84);
             this.gridImpresoras.MainView = this.gvImpresoras;
             this.gridImpresoras.Margin = new System.Windows.Forms.Padding(4);
             this.gridImpresoras.Name = "gridImpresoras";
-            this.gridImpresoras.Size = new System.Drawing.Size(587, 349);
+            this.gridImpresoras.Size = new System.Drawing.Size(736, 372);
             this.gridImpresoras.TabIndex = 0;
             this.gridImpresoras.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvImpresoras});
@@ -195,7 +199,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.Location = new System.Drawing.Point(528, 395);
+            this.btnGuardar.Location = new System.Drawing.Point(677, 463);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 35);
             this.btnGuardar.TabIndex = 1;
@@ -210,30 +214,70 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(619, 35);
+            this.label1.Size = new System.Drawing.Size(768, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Impresoras";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 18);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Selecciona Exportador:";
+            // 
+            // cbEtiquetaProd
+            // 
+            this.cbEtiquetaProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEtiquetaProd.FormattingEnabled = true;
+            this.cbEtiquetaProd.Location = new System.Drawing.Point(174, 51);
+            this.cbEtiquetaProd.Name = "cbEtiquetaProd";
+            this.cbEtiquetaProd.Size = new System.Drawing.Size(260, 26);
+            this.cbEtiquetaProd.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(519, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 18);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Bascula:";
+            // 
+            // cmbBasculas
+            // 
+            this.cmbBasculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBasculas.FormattingEnabled = true;
+            this.cmbBasculas.Location = new System.Drawing.Point(583, 51);
+            this.cmbBasculas.Name = "cmbBasculas";
+            this.cmbBasculas.Size = new System.Drawing.Size(166, 26);
+            this.cmbBasculas.TabIndex = 6;
             // 
             // Frm_AdmImpresoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 442);
+            this.ClientSize = new System.Drawing.Size(768, 510);
+            this.Controls.Add(this.cmbBasculas);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbEtiquetaProd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.gridImpresoras);
             this.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(635, 480);
             this.Name = "Frm_AdmImpresoras";
             this.ShowIcon = false;
-            this.Text = "Administración de Impresoras";
+            this.Text = "Impresora";
             this.Load += new System.EventHandler(this.Frm_AdmImpresoras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridImpresoras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.impresoraBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvImpresoras)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -246,5 +290,9 @@
         private System.Windows.Forms.Button btnGuardar;
         private DevExpress.XtraGrid.Columns.GridColumn colID;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbEtiquetaProd;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbBasculas;
     }
 }
